@@ -33,21 +33,13 @@ const featuredPosts = [
 ];
 
 const sidebar = {
-  title: 'About',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'April 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'March 2020', url: '#' },
+  title: 'Events',
+  events: [
+    { title: 'Board Meeting', date: 'August 24, 7:00 PM - 9:00 PM', url: '#' },
+    { title: 'Labour Day', date: 'September 4, All Day', url: '#' },
+    { title: 'First Day of School for Students', date: 'September 5, All Day', url: '#' },
+    { title: 'Governance and Policy Committee Meeting', date: 'September 5, 7:00 PM - 9:00 PM', url: '#' },
+    { title: 'Student Achievement Committee Meeting', date: 'September 7, 7:00 PM - 9:00 PM', url: '#' },
   ]
 };
 
@@ -81,7 +73,7 @@ export default function HomePage() {
         </Grid>
         <Sidebar
           title={sidebar.title}
-          archives={sidebar.archives}
+          events={sidebar.events}
         />
       </Grid>
     </>
