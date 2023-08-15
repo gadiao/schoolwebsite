@@ -1,11 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+import { Container, Button, IconButton, Link, Toolbar, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 
 function Header(props) {
   const { sections, title } = props;
@@ -31,24 +27,31 @@ function Header(props) {
           Sign up
         </Button>
       </Toolbar>
-      <Toolbar
-        component="nav"
-        variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+      <Container
+        maxWidth="xl" 
+        sx={{ justifyContent: 'center' }}
       >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
-        ))}
-      </Toolbar>
+        <Toolbar
+          component="nav"
+          variant="dense"
+          sx={{ justifyContent: 'space-between', overflowX: 'hidden' }}
+        >
+          {sections.map((section) => (
+            <Link
+              color="inherit"
+              noWrap
+              key={section.title}
+              variant="body1"
+              href={section.url}
+              sx={{ p: 1, flexShrink: 0 }}
+            >
+              {section.title}
+            </Link>
+          ))}
+        </Toolbar>
+      </Container>
+      
+
     </React.Fragment>
   );
 }

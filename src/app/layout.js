@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
@@ -23,9 +22,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeRegistry>
           <Header title="Blog" sections={sections} />
-          <Container>
-            {children}
-          </Container>
+          {children}
           <Footer
             title="Footer"
             description="Something here to give the footer a purpose!"

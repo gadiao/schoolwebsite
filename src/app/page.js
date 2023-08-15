@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Divider, Grid, Typography } from '@mui/material';
+import { Container, Divider, Grid, Typography } from '@mui/material';
 import MainFeaturedPost from '@/components/MainFeaturedPost';
 import FeaturedPost from '@/components/FeaturedPost';
 import Sidebar from '@/components/Sidebar';
@@ -47,6 +47,7 @@ export default function HomePage() {
   return (
     <>
       <MainFeaturedPost post={mainFeaturedPost} />
+      <Container maxWidth="xl">
       <Typography variant="h6" gutterBottom>
         Featured News
       </Typography>
@@ -76,6 +77,8 @@ export default function HomePage() {
           events={sidebar.events}
         />
       </Grid>
+      </Container>
+      
     </>
   );
 }
