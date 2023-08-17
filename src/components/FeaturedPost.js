@@ -47,7 +47,6 @@ FeaturedPost.propTypes = {
     givenXS: PropTypes.number.isRequired,
     givenMD: PropTypes.number.isRequired,
   }),
-  givenDirection: PropTypes.string.isRequired,
 };
 
 export default FeaturedPost;

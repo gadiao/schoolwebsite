@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container, Divider, Grid, Typography } from '@mui/material';
 import MainFeaturedPost from '@/components/MainFeaturedPost';
 import FeaturedPost from '@/components/FeaturedPost';
-import Sidebar from '@/components/Sidebar';
+import EventsBar from '@/components/EventsBar';
 
 const mainFeaturedPost = {
   title: 'Welcome to Center For Early Education (CFESchool)',
@@ -59,7 +59,7 @@ const featuredPosts2 = [
   },
 ];
 
-const sidebar = {
+const eventsbar = {
   title: 'Events',
   events: [
     { title: 'Board Meeting', date: 'August 24, 7:00 PM - 9:00 PM', url: '#' },
@@ -81,10 +81,14 @@ export default function HomePage() {
         <Divider sx={{ mb: 2 }}/>
         <Grid container spacing={2}>
           {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }} givenDirection={'column'}/>
+            <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
           ))}
         </Grid>
         <Grid container spacing={2} sx={{ mt: 1 }}>
+          <EventsBar
+            title={eventsbar.title}
+            events={eventsbar.events}
+          />
           <Grid
             item
             xs={12}
@@ -96,13 +100,9 @@ export default function HomePage() {
             </Typography>
             <Divider sx={{ mb: 3 }}/>
             {featuredPosts2.map((post) => (
-              <FeaturedPost key={post.title} post={post} bp={{ givenXS: 0, givenMD: 0 }} givenDirection={'row'}/>
+              <FeaturedPost key={post.title} post={post} bp={{ givenXS: 0, givenMD: 0 }}/>
             ))}
           </Grid>
-          <Sidebar
-            title={sidebar.title}
-            events={sidebar.events}
-          />
         </Grid>
       </Container>
       
