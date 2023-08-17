@@ -1,19 +1,20 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 
 function FeaturedPost(props) {
-  const { post, bp } = props;
+  const { post, bp, givenDirection } = props;
 
   return (
     <Grid item xs={bp.givenXS} md={bp.givenMD} sx={{ mb: 4 }}>
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: 'flex' }}>
+        <Card sx={{ display: "flex", flexDirection: "column" }}>
+          <CardMedia
+            component="img"
+            sx={{ height: 150, display: { xs: 'none', sm: 'block' } }}
+            image={post.image}
+            alt={post.imageLabel}
+          />
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
               {post.title}
@@ -28,12 +29,6 @@ function FeaturedPost(props) {
               Continue reading...
             </Typography>
           </CardContent>
-          <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
-            alt={post.imageLabel}
-          />
         </Card>
       </CardActionArea>
     </Grid>
@@ -52,6 +47,7 @@ FeaturedPost.propTypes = {
     givenXS: PropTypes.number.isRequired,
     givenMD: PropTypes.number.isRequired,
   }),
+  givenDirection: PropTypes.string.isRequired,
 };
 
 export default FeaturedPost;

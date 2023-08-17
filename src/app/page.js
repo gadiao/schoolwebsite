@@ -5,15 +5,42 @@ import FeaturedPost from '@/components/FeaturedPost';
 import Sidebar from '@/components/Sidebar';
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'Welcome to Center For Early Education (CFESchool)',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "Center For Early Education (CFESchool) was founded in 1980, by Beverly Anne Russel-Lockhart as one of the first preschools in the Bahamas. Our goal is to provide a nurturing and stimulating environment for young children to learn and grow into leaders and pillars of their community.",
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
-  linkText: 'Continue reading…',
+  linkText: 'Learn More',
 };
 
 const featuredPosts = [
+  {
+    title: 'Featured post',
+    date: 'Nov 12',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+  },
+  {
+    title: 'Post title',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+  },
+  {
+    title: 'Post title',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+  },
+];
+
+const featuredPosts2 = [
   {
     title: 'Featured post',
     date: 'Nov 12',
@@ -48,35 +75,35 @@ export default function HomePage() {
     <>
       <MainFeaturedPost post={mainFeaturedPost} />
       <Container maxWidth="xl">
-      <Typography variant="h6" gutterBottom>
-        Featured News
-      </Typography>
-      <Divider sx={{ mb: 3 }}/>
-      <Grid container spacing={4}>
-        {featuredPosts.map((post) => (
-          <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 6 }}/>
-        ))}
-      </Grid>
-      <Grid container spacing={4} sx={{ mt: 1 }}>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: 'block' }}
-        >
-          <Typography variant="h6" gutterBottom>
-            More info
-          </Typography>
-          <Divider sx={{ mb: 3 }}/>
+        <Typography variant="h5" gutterBottom>
+          Featured News
+        </Typography>
+        <Divider sx={{ mb: 2 }}/>
+        <Grid container spacing={2}>
           {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} bp={{ givenXS: 0, givenMD: 0 }}/>
+            <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }} givenDirection={'column'}/>
           ))}
         </Grid>
-        <Sidebar
-          title={sidebar.title}
-          events={sidebar.events}
-        />
-      </Grid>
+        <Grid container spacing={2} sx={{ mt: 1 }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: 'block' }}
+          >
+            <Typography variant="h5" gutterBottom>
+              More info
+            </Typography>
+            <Divider sx={{ mb: 3 }}/>
+            {featuredPosts2.map((post) => (
+              <FeaturedPost key={post.title} post={post} bp={{ givenXS: 0, givenMD: 0 }} givenDirection={'row'}/>
+            ))}
+          </Grid>
+          <Sidebar
+            title={sidebar.title}
+            events={sidebar.events}
+          />
+        </Grid>
       </Container>
       
     </>

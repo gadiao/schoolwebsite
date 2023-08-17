@@ -38,14 +38,16 @@ function MainFeaturedPost(props) {
             sx={{
               position: 'relative',
               mt: 6,
-              p: 6,
-              pr: { md: 0 },
+              ml: { xs: 6, xl: 24 },
+              p: 4,
+              bgcolor: 'error.main',
+              opacity: 0.85,
             }}
           >
             <Typography component="h1" variant="h4" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h7" color="inherit" paragraph>
+            <Typography variant="subtitle1" color="inherit" paragraph>
               {post.description}
             </Typography>
             <Link variant="subtitle1" href="#">
