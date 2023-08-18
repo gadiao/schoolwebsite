@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 
 function FeaturedPost(props) {
-  const { post, bp, givenDirection } = props;
+  const { post, bp } = props;
 
   return (
     <Grid item xs={bp.givenXS} md={bp.givenMD} sx={{ mb: 4 }}>

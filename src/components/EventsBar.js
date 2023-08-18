@@ -12,7 +12,7 @@ function Sidebar(props) {
   const { title, events } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={8}>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>

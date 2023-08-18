@@ -3,6 +3,7 @@ import { Container, Divider, Grid, Typography } from '@mui/material';
 import MainFeaturedPost from '@/components/MainFeaturedPost';
 import FeaturedPost from '@/components/FeaturedPost';
 import EventsBar from '@/components/EventsBar';
+import MoreInfo from '@/components/MoreInfo';
 
 const mainFeaturedPost = {
   title: 'Welcome to Center For Early Education (CFESchool)',
@@ -25,25 +26,6 @@ const featuredPosts = [
   {
     title: 'Post title',
     date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-  },
-];
-
-const featuredPosts2 = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
     image: 'https://source.unsplash.com/random?wallpapers',
@@ -89,20 +71,7 @@ export default function HomePage() {
             title={eventsbar.title}
             events={eventsbar.events}
           />
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{ display: 'block' }}
-          >
-            <Typography variant="h5" gutterBottom>
-              More info
-            </Typography>
-            <Divider sx={{ mb: 3 }}/>
-            {featuredPosts2.map((post) => (
-              <FeaturedPost key={post.title} post={post} bp={{ givenXS: 0, givenMD: 0 }}/>
-            ))}
-          </Grid>
+          <MoreInfo />
         </Grid>
       </Container>
       
