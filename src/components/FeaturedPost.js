@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 
 function FeaturedPost(props) {
@@ -8,14 +9,27 @@ function FeaturedPost(props) {
   return (
     <Grid item xs={bp.givenXS} md={bp.givenMD} sx={{ mb: 4 }}>
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: "flex", flexDirection: "column" }}>
-          <CardMedia
-            component="img"
-            sx={{ height: 150, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
-            alt={post.imageLabel}
-          />
-          <CardContent sx={{ flex: 1 }}>
+        <Card 
+          sx={{ 
+            height: { xs: 250, md: 400 }, 
+            display: "flex", 
+            flexDirection: { xs: 'row', md: 'column'} 
+          }}
+        >
+          <CardMedia sx={{ height: { xs: 250, md: 150 } }}>
+            <Image
+              alt="Random image"
+              src="https://source.unsplash.com/random"
+              width={600}
+              height={400}
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </CardMedia>
+          <CardContent>
             <Typography component="h2" variant="h5">
               {post.title}
             </Typography>

@@ -11,7 +11,14 @@ export default function MoreInfo() {
       sx={{ display: "flex", flexDirection: "column" }}
     >
       <Card
-        sx={{ display: "flex", flexDirection: "column", textAlign: 'center', mb: 6, p: 1 }}
+        sx={{ 
+          display: "flex", 
+          flexDirection: "column", 
+          textAlign: 'center', 
+          mb: 6, 
+          p: 1,
+          bgcolor: "secondary.main"
+        }}
       >
         <CardContent sx={{ flex: 1 }}>
           <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
@@ -23,12 +30,22 @@ export default function MoreInfo() {
         </CardContent>
         <CardActions  sx={{ display: "flex", flexDirection: "column"}}>
           {/* Remember to edit Moreinfo input */}
-          <TextField id="outlined-basic" label="Enter your email here" variant="outlined" size="small" sx={{ mb: 2 }}/>
+          <TextField 
+            id="outlined-basic"
+            label="Enter your email here"
+            variant="outlined"
+            size="small"
+            sx={{ mb: 2 }}/>
           <Button variant="contained" size="small">Subscribe Now</Button>
         </CardActions>
       </Card>
       <Card
-        sx={{ display: "flex", flexDirection: "column", textAlign: 'center', p: 1 }}
+        sx={{ 
+          display: "flex",
+          flexDirection: "column",
+          textAlign: 'center',
+          p: 1,
+        }}
       >
         <CardContent sx={{ flex: 1 }}>
           <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
@@ -40,7 +57,7 @@ export default function MoreInfo() {
         </CardContent>
         <CardActions sx={{ display: "flex", flexDirection: "column"}}>
           {/* Remember to edit Moreinfo input */}
-          <PictureAsPdfOutlined color="secondary" sx={{ fontSize: 60 }}/>
+          <PictureAsPdfOutlined color="primary" sx={{ fontSize: 60 }}/>
           <Button variant="contained" size="small" sx={{ mt: 2 }}>Download Brochure</Button>
         </CardActions>
       </Card>

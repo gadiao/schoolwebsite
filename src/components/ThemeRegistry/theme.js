@@ -11,10 +11,10 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     primary: {
-      main: red[700],
+      main: red[800],
     },
     secondary: {
-      main: grey[500],
+      main: grey[300],
     },
   },
   typography: {

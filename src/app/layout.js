@@ -4,16 +4,12 @@ import Footer from '@/components/Footer';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'OUR SCHOOL', url: '#' },
+  { title: 'ACADEMICS', url: '#' },
+  { title: 'ADMISSIONS', url: '#' },
+  { title: 'EVENTS & NEWS', url: '#' },
+  { title: 'LEARNING TOOLS', url: '#' },
+  { title: 'CONTACT', url: '#' },
 ];
 
 export default function RootLayout({ children }) {
