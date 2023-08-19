@@ -1,40 +1,59 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Button, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, Container, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import logo from '@/img/logo.jpg'
 
 function Header(props) {
   const { sections, title } = props;
 
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="small">Subscribe</Button>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
-        >
-          {title}
-        </Typography>
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button>
-      </Toolbar>
-      <Container
-        maxWidth="xl" 
-        sx={{ justifyContent: 'center' }}
-      >
+      <AppBar position="static">
+        <Toolbar 
+          sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: 'white', color: 'black' }}>
+          <IconButton>
+            <SearchIcon />
+          </IconButton>
+          <Image
+            alt="Logo"
+            src={logo}
+            width={80}
+            height={100}
+            priority
+            style={{
+              maxWidth: '100%',
+              height: '100px',
+              objectFit: 'cover',
+            }}
+            />
+          <Typography
+            component="h2"
+            variant="h5"
+            color="inherit"
+            align="center"
+            noWrap
+            sx={{ flex: 1 }}
+          >
+            {title}
+          </Typography>
+          <IconButton>
+            <AccountCircle />
+          </IconButton>
+          <Button variant="text">
+            LOG IN
+          </Button>
+        </Toolbar>
         <Toolbar
           component="nav"
           variant="dense"
-          sx={{ justifyContent: 'space-between', overflowX: 'hidden' }}
+          sx={{ 
+            justifyContent: 'center',
+            overflowX: 'hidden',
+            color: 'white',
+          }}
         >
           {sections.map((section) => (
             <Link
@@ -43,15 +62,14 @@ function Header(props) {
               key={section.title}
               variant="body1"
               href={section.url}
-              sx={{ p: 1, flexShrink: 0 }}
+              underline="hover"
+              sx={{ pl: 2, pr: 2, flexShrink: 0 }}
             >
               {section.title}
             </Link>
           ))}
         </Toolbar>
-      </Container>
-      
-
+      </AppBar>
     </React.Fragment>
   );
 }

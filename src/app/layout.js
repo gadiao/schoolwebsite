@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
 const sections = [
+  { title: 'HOME', url: '#' },
   { title: 'OUR SCHOOL', url: '#' },
   { title: 'ACADEMICS', url: '#' },
   { title: 'ADMISSIONS', url: '#' },
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <Header title="Blog" sections={sections} />
+          <Header title="Center For Early Education" sections={sections} />
           {children}
           <Footer
             title="Footer"

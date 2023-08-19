@@ -1,7 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Grid, Link, Paper, Typography} from '@mui/material';
-
+import Image from 'next/image';
+import landingpage from '@/img/landingpage.jpg'
 
 function MainFeaturedPost(props) {
   const { post } = props;
@@ -21,6 +22,7 @@ function MainFeaturedPost(props) {
       }}
     >
       {/* Increase the priority of the hero background image */}
+      {/* Update Hero image to have higher priority */}
       {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
       <Box
         sx={{
