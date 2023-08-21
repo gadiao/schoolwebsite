@@ -31,7 +31,7 @@ function Header(props) {
             <Typography
               variant="h5"
               color="darkred"
-              sx={{ width: '150px', fontWeight: 800 }}
+              sx={{ width: '170px', fontWeight: 800 }}
             >
               {title}
             </Typography>
