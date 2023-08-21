@@ -1,10 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Button, Container, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, IconButton, Link, Stack, Toolbar, Typography } from '@mui/material';
 import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import logo from '@/img/logo.jpg'
+import logo from '@/img/logo.png'
 
 function Header(props) {
   const { sections, title } = props;
@@ -13,38 +13,37 @@ function Header(props) {
     <React.Fragment>
       <AppBar position="static">
         <Toolbar 
-          sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: 'white', color: 'black' }}>
+          sx={{
+            pt: 2,
+            pb: 2,
+            borderBottom: 1, 
+            borderColor: 'divider', 
+            bgcolor: 'white', 
+            color: 'black',
+            justifyContent: 'space-between',
+          }}
+        >
           <IconButton>
             <SearchIcon />
           </IconButton>
-          <Image
-            alt="Logo"
-            src={logo}
-            width={80}
-            height={100}
-            priority
-            style={{
-              maxWidth: '100%',
-              height: '100px',
-              objectFit: 'cover',
-            }}
-            />
-          <Typography
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align="center"
-            noWrap
-            sx={{ flex: 1 }}
-          >
-            {title}
-          </Typography>
-          <IconButton>
-            <AccountCircle />
-          </IconButton>
-          <Button variant="text">
-            LOG IN
-          </Button>
+          <Stack direction='row'>
+            <Image alt="Logo" src={logo} width={70} height={80} priority />
+            <Typography
+              variant="h5"
+              color="darkred"
+              sx={{ width: '150px', fontWeight: 800 }}
+            >
+              {title}
+            </Typography>
+          </Stack>
+          <Stack direction='row'>
+            <IconButton>
+              <AccountCircle />
+            </IconButton>
+            <Button variant="text">
+              LOG IN
+            </Button>
+          </Stack>
         </Toolbar>
         <Toolbar
           component="nav"

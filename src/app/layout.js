@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <Header title="Center For Early Education" sections={sections} />
+          <Header title="Center for Early Education" sections={sections} />
           {children}
           <Footer
             title="Footer"
