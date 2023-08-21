@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Grid, Link, Paper, Typography} from '@mui/material';
 import Image from 'next/image';
-import landingpage from '@/img/landingpage.jpg'
+import landingpage from '@/img/landingpage.png'
 
 function MainFeaturedPost(props) {
   const { post } = props;
@@ -18,12 +18,11 @@ function MainFeaturedPost(props) {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: `url(${post.image})`,
+        backgroundImage: `url(${landingpage.src})`,
       }}
     >
       {/* Increase the priority of the hero background image */}
       {/* Update Hero image to have higher priority */}
-      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
       <Box
         sx={{
           position: 'absolute',
@@ -42,8 +41,8 @@ function MainFeaturedPost(props) {
               mt: 6,
               ml: { xs: 6, xl: 24 },
               p: 4,
-              bgcolor: 'error.main',
-              opacity: 0.85,
+              bgcolor: 'primary.main',
+              opacity: 0.8,
             }}
           >
             <Typography component="h1" variant="h4" color="inherit" gutterBottom>
@@ -52,7 +51,7 @@ function MainFeaturedPost(props) {
             <Typography variant="subtitle1" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
+            <Link variant="subtitle1" color="#fff" href="#">
               {post.linkText}
             </Link>
           </Box>
