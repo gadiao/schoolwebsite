@@ -62,7 +62,7 @@ function Header(props) {
               variant="body1"
               href={section.url}
               underline="hover"
-              sx={{ pl: 2, pr: 2, flexShrink: 0 }}
+              sx={{ pl: 3.5, pr: 3.5, flexShrink: 0 }}
             >
               {section.title}
             </Link>

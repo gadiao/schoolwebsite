@@ -4,13 +4,13 @@ import Footer from '@/components/Footer';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
 const sections = [
-  { title: 'HOME', url: '#' },
-  { title: 'OUR SCHOOL', url: '#' },
-  { title: 'ACADEMICS', url: '#' },
-  { title: 'ADMISSIONS', url: '#' },
-  { title: 'EVENTS & NEWS', url: '#' },
-  { title: 'LEARNING TOOLS', url: '#' },
-  { title: 'CONTACT', url: '#' },
+  { title: 'Home', url: '#' },
+  { title: 'Our School', url: '#' },
+  { title: 'Academics', url: '#' },
+  { title: 'Admissions', url: '#' },
+  { title: 'Events & News', url: '#' },
+  { title: 'Learning Tools', url: '#' },
+  { title: 'Contact', url: '#' },
 ];
 
 export default function RootLayout({ children }) {

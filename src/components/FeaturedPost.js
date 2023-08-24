@@ -7,7 +7,7 @@ function FeaturedPost(props) {
   const { post, bp } = props;
 
   return (
-    <Grid item xs={bp.givenXS} md={bp.givenMD} sx={{ mb: 4 }}>
+    <Grid item xs={bp.givenXS} md={bp.givenMD}>
       <CardActionArea component="a" href="#">
         <Card 
           sx={{ 
@@ -30,7 +30,7 @@ function FeaturedPost(props) {
             />
           </CardMedia>
           <CardContent>
-            <Typography component="h2" variant="h5">
+            <Typography variant="h6">
               {post.title}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">

@@ -57,16 +57,16 @@ export default function HomePage() {
     <>
       <MainFeaturedPost post={mainFeaturedPost} />
       <Container maxWidth="xl">
-        <Typography variant="h5" gutterBottom>
-          Featured News
+        <Typography variant="h4" gutterBottom>
+          News
         </Typography>
         <Divider sx={{ mb: 2 }}/>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ mb: 8 }}>
           {featuredPosts.map((post) => (
             <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
           ))}
         </Grid>
-        <Grid container spacing={2} sx={{ mt: 1 }}>
+        <Grid container spacing={2}>
           <EventsBar
             title={eventsbar.title}
             events={eventsbar.events}
@@ -74,7 +74,6 @@ export default function HomePage() {
           <MoreInfo />
         </Grid>
       </Container>
-      
     </>
   );
 }

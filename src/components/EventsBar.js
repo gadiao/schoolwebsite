@@ -13,10 +13,10 @@ function Sidebar(props) {
 
   return (
     <Grid item xs={12} md={8}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         {title}
       </Typography>
-      <Divider sx={{ mb: 3 }}/>
+      <Divider sx={{ mb: 2 }}/>
       <Timeline
         sx={{
           [`& .${timelineOppositeContentClasses.root}`]: {

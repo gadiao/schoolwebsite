@@ -13,8 +13,8 @@ function MainFeaturedPost(props) {
         position: 'relative',
         backgroundColor: 'grey.800',
         color: '#fff',
-        pb: 12,
-        mb: 4,
+        pb: 10,
+        mb: 8,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -38,20 +38,20 @@ function MainFeaturedPost(props) {
           <Box
             sx={{
               position: 'relative',
-              mt: 6,
+              mt: 20,
               ml: { xs: 6, xl: 24 },
-              p: 4,
+              p: 3,
               bgcolor: 'primary.main',
               opacity: 0.8,
             }}
           >
-            <Typography component="h1" variant="h4" color="inherit" gutterBottom>
+            <Typography variant="h5" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="subtitle1" color="inherit" paragraph>
+            <Typography variant="body2" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" color="#fff" href="#">
+            <Link variant="body2" color="#fff" href="#">
               {post.linkText}
             </Link>
           </Box>
