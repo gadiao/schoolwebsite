@@ -1,16 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import { Container, Divider, Link, Stack, Typography } from '@mui/material';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        CREF
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -18,32 +15,57 @@ function Copyright() {
   );
 }
 
-function Footer(props) {
-  const { description, title } = props;
+export default function Footer() {
 
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
-      <Container maxWidth="lg">
+    <Stack 
+      direction="row"
+      divider={<Divider orientation="vertical" variant="middle" light flexItem />}
+      sx={{ mt: 6, py: 6, bgcolor: 'primary.main', color: '#fff' }}
+    >
+      <Container component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          {title}
+          Contact Us
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant="subtitle2"
           align="center"
           color="text.secondary"
           component="p"
         >
-          {description}
+          Tel: 123-456-7890
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          Email: info@mysite.com
         </Typography>
         <Copyright />
       </Container>
-    </Box>
-  );
+      <Container component="footer">
+        <Typography variant="h6" align="center" gutterBottom>
+          Address
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          500 Terry Francine Street,
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          San Francisco, CA 94158
+        </Typography>
+      </Container>
+    </Stack>
+  );d
 }
-
-Footer.propTypes = {
-  description: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
-
-export default Footer;

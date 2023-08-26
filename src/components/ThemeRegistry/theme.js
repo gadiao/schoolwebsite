@@ -14,23 +14,15 @@ const theme = createTheme({
       main: red[800],
     },
     secondary: {
-      main: grey[300],
+      main: grey[200],
     },
+    text: {
+      secondary: red[200]
+    }
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
-  },
-  components: {
-    MuiAlert: {
-      styleOverrides: {
-        root: ({ ownerState }) => ({
-          ...(ownerState.severity === 'info' && {
-            backgroundColor: '#60a5fa',
-          }),
-        }),
-      },
-    },
-  },
+  }
 });
 
 export default theme;

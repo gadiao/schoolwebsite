@@ -20,10 +20,7 @@ export default function RootLayout({ children }) {
         <ThemeRegistry>
           <Header title="Center for Early Education" sections={sections} />
           {children}
-          <Footer
-            title="Footer"
-            description="Something here to give the footer a purpose!"
-          />
+          <Footer />
         </ThemeRegistry>
       </body>
     </html>

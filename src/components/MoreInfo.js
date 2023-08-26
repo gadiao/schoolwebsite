@@ -21,10 +21,10 @@ export default function MoreInfo() {
         }}
       >
         <CardContent sx={{ flex: 1 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
+          <Typography component="h2" variant="h5" sx={{ mb: 2, fontWeight: 500 }}>
             Stay Informed
           </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
+          <Typography variant="subtitle2" sx={{ fontWeight: 400  }}>
             Get Updates on CFESchool's latest events and news to stay informed about our community and our mission.
           </Typography>
         </CardContent>
@@ -48,10 +48,10 @@ export default function MoreInfo() {
         }}
       >
         <CardContent sx={{ flex: 1 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
+          <Typography component="h2" variant="h5" sx={{ mb: 2, fontWeight: 500  }}>
             Download Our School Brochure
           </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
+          <Typography variant="subtitle2" sx={{ fontWeight: 400  }}>
             Learn more about CFGESchool and our programs by downloading our school brochure.
           </Typography>
         </CardContent>

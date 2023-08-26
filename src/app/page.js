@@ -61,7 +61,7 @@ export default function HomePage() {
           News
         </Typography>
         <Divider sx={{ mb: 2 }}/>
-        <Grid container spacing={2} sx={{ mb: 8 }}>
+        <Grid container spacing={2} sx={{ mb: 6 }}>
           {featuredPosts.map((post) => (
             <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
           ))}
