@@ -15,7 +15,7 @@ export default function MoreInfo() {
           display: "flex", 
           flexDirection: "column", 
           textAlign: 'center', 
-          mb: 6, 
+          mb: 3, 
           p: 1,
           bgcolor: "secondary.main"
         }}
