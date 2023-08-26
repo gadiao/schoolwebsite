@@ -13,7 +13,7 @@ function MainFeaturedPost(props) {
         position: 'relative',
         backgroundColor: 'grey.800',
         color: '#fff',
-        py: 20,
+        py: 26,
         mb: 10,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
