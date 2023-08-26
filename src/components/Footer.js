@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, CardMedia, Container, Grid, Link, Typography } from '@mui/material';
+import { Card, CardMedia, Grid, Link, Typography } from '@mui/material';
 import Image from 'next/image';
 import logocaption from '@/img/logocaption.jpg'
 
@@ -23,7 +23,8 @@ export default function Footer() {
       container
       sx={{ 
         mt: 6,
-        py: 4,
+        py: 2,
+        px: 4,
         bgcolor: 'primary.main',
         color: '#fff',
         justifyContent: 'center'
@@ -33,17 +34,18 @@ export default function Footer() {
         container 
         maxWidth="md" 
         sx={{ 
-          flexDirection: 'row', 
+          flexDirection: { xs: 'column', md: 'row'}, 
           justifyContent: 'space-between',
+          alignContent: 'center'
         }}
       >
-        <Grid item>
+        <Grid item sx={{ py: 2 }}>
           <Card sx={{ maxWidth: 200, maxHeight: 150 }}>
             <CardMedia>
               <Image
                 alt="Logo with Caption"
                 src={logocaption}
-                width={200}
+                width={180}
                 height={150}
                 style={{
                   maxWidth: '100%',
@@ -55,7 +57,7 @@ export default function Footer() {
             </CardMedia>
           </Card>
         </Grid>
-        <Grid item>
+        <Grid item sx={{ py: 2 }}>
           <Typography variant="h6" align="center" gutterBottom>
             Contact Us
           </Typography>
@@ -77,7 +79,7 @@ export default function Footer() {
           </Typography>
           <Copyright />
         </Grid>
-        <Grid item>
+        <Grid item sx={{ py: 2 }}>
           <Typography variant="h6" align="center" gutterBottom>
             Address
           </Typography>

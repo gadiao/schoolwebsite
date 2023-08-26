@@ -15,16 +15,16 @@ export default function MoreInfo() {
           display: "flex", 
           flexDirection: "column", 
           textAlign: 'center', 
-          mb: 3, 
+          mb: 4, 
           p: 1,
           bgcolor: "secondary.main"
         }}
       >
-        <CardContent sx={{ flex: 1 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, fontWeight: 500 }}>
+        <CardContent>
+          <Typography variant="h6" sx={{ mb: 2 }}>
             Stay Informed
           </Typography>
-          <Typography variant="subtitle2" sx={{ fontWeight: 400  }}>
+          <Typography variant="body2">
             Get Updates on CFESchool's latest events and news to stay informed about our community and our mission.
           </Typography>
         </CardContent>
@@ -35,7 +35,8 @@ export default function MoreInfo() {
             label="Enter your email here"
             variant="outlined"
             size="small"
-            sx={{ mb: 2 }}/>
+            sx={{ mb: 1 }}
+          />
           <Button variant="contained" size="small">Subscribe Now</Button>
         </CardActions>
       </Card>
@@ -48,17 +49,17 @@ export default function MoreInfo() {
         }}
       >
         <CardContent sx={{ flex: 1 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, fontWeight: 500  }}>
-            Download Our School Brochure
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Our School Brochure
           </Typography>
-          <Typography variant="subtitle2" sx={{ fontWeight: 400  }}>
+          <Typography variant="body2">
             Learn more about CFGESchool and our programs by downloading our school brochure.
           </Typography>
         </CardContent>
-        <CardActions sx={{ display: "flex", flexDirection: "column"}}>
+        <CardActions sx={{ display: "flex", flexDirection: "column" }}>
           {/* Remember to edit Moreinfo input */}
           <PictureAsPdfOutlined color="primary" sx={{ fontSize: 60 }}/>
-          <Button variant="contained" size="small" sx={{ mt: 2 }}>Download Brochure</Button>
+          <Button variant="contained" size="small" sx={{ mt: 1 }}>Download Brochure</Button>
         </CardActions>
       </Card>
     </Grid>

@@ -13,8 +13,8 @@ function MainFeaturedPost(props) {
         position: 'relative',
         backgroundColor: 'grey.800',
         color: '#fff',
-        pb: 10,
-        mb: 8,
+        py: 20,
+        mb: 10,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -37,15 +37,14 @@ function MainFeaturedPost(props) {
         <Grid item md={6}>
           <Box
             sx={{
-              position: 'relative',
-              mt: 20,
-              ml: { xs: 6, xl: 24 },
+              mt: 10,
+              mx: { xs: 8, xl: 24 },
               p: 3,
               bgcolor: 'primary.main',
               opacity: 0.8,
             }}
           >
-            <Typography variant="h5" color="inherit" gutterBottom>
+            <Typography variant="h4" color="inherit" gutterBottom>
               {post.title}
             </Typography>
             <Typography variant="body2" color="inherit" paragraph>

@@ -16,7 +16,7 @@ function FeaturedPost(props) {
             flexDirection: { xs: 'row', md: 'column'} 
           }}
         >
-          <CardMedia sx={{ height: { xs: 250, md: 150 } }}>
+          <CardMedia sx={{ height: { xs: 250, md: 200, xl: 250 } }}>
             <Image
               alt="Random image"
               src="https://source.unsplash.com/random"
@@ -33,14 +33,11 @@ function FeaturedPost(props) {
             <Typography variant="h6">
               {post.title}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
               {post.date}
             </Typography>
-            <Typography variant="subtitle1" paragraph>
+            <Typography variant="body1" paragraph>
               {post.description}
-            </Typography>
-            <Typography variant="subtitle1" color="primary">
-              Continue reading...
             </Typography>
           </CardContent>
         </Card>

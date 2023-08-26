@@ -9,14 +9,10 @@ import TimelineOppositeContent, {
 } from '@mui/lab/TimelineOppositeContent';
 
 function Sidebar(props) {
-  const { title, events } = props;
+  const { events } = props;
 
   return (
     <Grid item xs={12} md={8}>
-      <Typography variant="h4" gutterBottom>
-        {title}
-      </Typography>
-      <Divider sx={{ mb: 2 }}/>
       <Timeline
         sx={{
           [`& .${timelineOppositeContentClasses.root}`]: {
@@ -48,7 +44,6 @@ function Sidebar(props) {
 Sidebar.propTypes = {
   events: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     }),

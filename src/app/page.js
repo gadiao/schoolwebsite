@@ -42,7 +42,6 @@ const featuredPosts = [
 ];
 
 const eventsbar = {
-  title: 'Events',
   events: [
     { title: 'Board Meeting', date: 'August 24, 7:00 PM - 9:00 PM', url: '#' },
     { title: 'Labour Day', date: 'September 4, All Day', url: '#' },
@@ -61,11 +60,15 @@ export default function HomePage() {
           News
         </Typography>
         <Divider sx={{ mb: 2 }}/>
-        <Grid container spacing={2} sx={{ mb: 6 }}>
+        <Grid container spacing={2} sx={{ mb: 10 }}>
           {featuredPosts.map((post) => (
             <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
           ))}
         </Grid>
+        <Typography variant="h4" gutterBottom>
+          Events
+        </Typography>
+        <Divider sx={{ mb: 2 }}/>
         <Grid container spacing={2}>
           <EventsBar
             title={eventsbar.title}
