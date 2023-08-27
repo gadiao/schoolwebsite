@@ -4,17 +4,13 @@ import PictureAsPdfOutlined from '@mui/icons-material/PictureAsPdfOutlined';
 
 export default function MoreInfo() {
   return (
-    <Grid
-      item
-      xs={12}
-      md={4}
-      sx={{ display: "flex", flexDirection: "column" }}
-    >
+    <Grid item sx={{ mb: { xs: 8, md: 0 } }}>
       <Card
-        sx={{ 
+        sx={{
           display: "flex", 
           flexDirection: "column", 
-          textAlign: 'center', 
+          textAlign: 'center',
+          maxWidth: 400,
           mb: 4, 
           p: 1,
           bgcolor: "secondary.main"
@@ -45,6 +41,7 @@ export default function MoreInfo() {
           display: "flex",
           flexDirection: "column",
           textAlign: 'center',
+          maxWidth: 400,
           p: 1,
         }}
       >

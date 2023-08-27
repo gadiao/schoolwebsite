@@ -4,19 +4,19 @@ import Image from 'next/image';
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 
 function News(props) {
-  const { post, bp } = props;
+  const { post } = props;
 
   return (
-    <Grid item xs={bp.givenXS} md={bp.givenMD}>
+    <Grid item>
       <CardActionArea component="a" href="#">
         <Card 
           sx={{ 
-            height: { xs: 250, md: 400 }, 
+            height: 200, 
             display: "flex", 
-            flexDirection: { xs: 'row', md: 'column'} 
+            flexDirection: 'row'
           }}
         >
-          <CardMedia sx={{ height: { xs: 250, md: 200, xl: 250 } }}>
+          <CardMedia sx={{ height: 200 }}>
             <Image
               alt="Random image"
               src="https://source.unsplash.com/random"

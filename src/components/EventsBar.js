@@ -12,7 +12,7 @@ function Sidebar(props) {
   const { events } = props;
 
   return (
-    <Grid item xs={12} md={8}>
+    <Grid item md={6} sx={{ mb: { xs: 8, md: 0 } }}>
       <Timeline
         sx={{
           [`& .${timelineOppositeContentClasses.root}`]: {
