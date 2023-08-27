@@ -4,7 +4,7 @@ import { Box, Grid, Link, Paper, Typography} from '@mui/material';
 import Image from 'next/image';
 import landingpage from '@/img/landingpage.png'
 
-function MainFeaturedPost(props) {
+function Hero(props) {
   const { post } = props;
 
   return (
@@ -60,7 +60,7 @@ function MainFeaturedPost(props) {
   );
 }
 
-MainFeaturedPost.propTypes = {
+Hero.propTypes = {
   post: PropTypes.shape({
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
@@ -70,4 +70,4 @@ MainFeaturedPost.propTypes = {
   }).isRequired,
 };
 
-export default MainFeaturedPost;
+export default Hero;

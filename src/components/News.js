@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 
-function FeaturedPost(props) {
+function News(props) {
   const { post, bp } = props;
 
   return (
@@ -46,7 +46,7 @@ function FeaturedPost(props) {
   );
 }
 
-FeaturedPost.propTypes = {
+News.propTypes = {
   post: PropTypes.shape({
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -60,4 +60,4 @@ FeaturedPost.propTypes = {
   }),
 };
 
-export default FeaturedPost;
+export default News;

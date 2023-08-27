@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Container, Divider, Grid, Typography } from '@mui/material';
-import MainFeaturedPost from '@/components/MainFeaturedPost';
-import FeaturedPost from '@/components/FeaturedPost';
+import Hero from '@/components/Hero';
+import News from '@/components/News';
 import EventsBar from '@/components/EventsBar';
 import MoreInfo from '@/components/MoreInfo';
 
-const mainFeaturedPost = {
+const welcomeinfo = {
   title: 'Welcome to Center For Early Education (CFESchool)',
   description:
     "Center For Early Education (CFESchool) was founded in 1980, by Beverly Anne Russel-Lockhart as one of the first preschools in the Bahamas. Our goal is to provide a nurturing and stimulating environment for young children to learn and grow into leaders and pillars of their community.",
@@ -14,7 +14,7 @@ const mainFeaturedPost = {
   linkText: 'Learn More',
 };
 
-const featuredPosts = [
+const news = [
   {
     title: 'Featured post',
     date: 'Nov 12',
@@ -54,15 +54,15 @@ const eventsbar = {
 export default function HomePage() {
   return (
     <>
-      <MainFeaturedPost post={mainFeaturedPost} />
+      <Hero post={welcomeinfo} />
       <Container maxWidth="xl">
         <Typography variant="h4" gutterBottom>
           News
         </Typography>
         <Divider sx={{ mb: 2 }}/>
         <Grid container spacing={2} sx={{ mb: 10 }}>
-          {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
+          {news.map((post) => (
+            <News key={post.title} post={post} bp={{ givenXS: 12, givenMD: 4 }}/>
           ))}
         </Grid>
         <Typography variant="h4" gutterBottom>
