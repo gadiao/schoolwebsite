@@ -25,7 +25,7 @@ export default function Header(props) {
           sx={{
             borderBottom: 1, 
             borderColor: 'divider', 
-            bgcolor: 'white', 
+            bgcolor: '#FDFDFD', 
             color: 'black',
             justifyContent: 'space-between',
           }}

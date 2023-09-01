@@ -6,7 +6,7 @@ import landingpage from '@/img/landingpage.png'
 export default function Hero() {
 
   return (
-    <Paper sx={{ position: 'relative', py: 30,  mb: 10 }}>
+    <Paper sx={{ position: 'relative', py: 30 }}>
       <Image
         alt="Landing Image"
         src={landingpage.src}

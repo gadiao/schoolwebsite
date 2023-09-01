@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
-import { Card, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 import News from '@/components/News';
 import EventsBar from '@/components/EventsBar';
@@ -47,9 +47,9 @@ const eventsbar = {
 
 export default function HomePage() {
   return (
-    <>
+    <Box sx={{ bgcolor: '#F3F3F3' }}>
       <Hero />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ bgcolor: '#F3F3F3', py: 4 }}>
         <Grid container sx={{ justifyContent: 'center', mb: 8 }} spacing={2}>
           <Grid item md={6} sx={{ mb: { xs: 8, md: 0 } }}>
             <Card 
@@ -100,7 +100,7 @@ export default function HomePage() {
         </Typography>
         <Divider sx={{ mb: 2 }}/>
         {/* Fix the cards to get it centered */}
-        <Grid container sx={{ justifyContent: 'center', mb: 8 }} spacing={2}>
+        <Grid container sx={{ justifyContent: 'center' }} spacing={2}>
           <EventsBar
             title={eventsbar.title}
             events={eventsbar.events}
@@ -108,6 +108,6 @@ export default function HomePage() {
           <MoreInfo />
         </Grid>
       </Container>
-    </>
+    </Box>
   );
 }
