@@ -45,7 +45,7 @@ export default function Footer() {
               <Image
                 alt="Logo with Caption"
                 src={logocaption}
-                width={180}
+                width={200}
                 height={150}
                 style={{
                   maxWidth: '100%',

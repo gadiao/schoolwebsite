@@ -1,21 +1,28 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import { AppBar, Button, IconButton, Link, Stack, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, Box, IconButton, Link, Stack, Toolbar, Typography } from '@mui/material';
 import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import logo from '@/img/logo.png'
+import logocaption from '@/img/logocaption.jpg'
 
-function Header(props) {
-  const { sections, title } = props;
+const sections = [
+  { title: 'HOME', url: '#' },
+  { title: 'OUR SCHOOL', url: '#' },
+  { title: 'ACADEMICS', url: '#' },
+  { title: 'ADMISSIONS', url: '#' },
+  { title: 'EVENTS & NEWS', url: '#' },
+  { title: 'LEARNING TOOLS', url: '#' },
+  { title: 'CONTACT', url: '#' },
+];
+
+export default function Header(props) {
 
   return (
-    <React.Fragment>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar 
+        <Toolbar
+          variant="dense"
           sx={{
-            pt: 2,
-            pb: 2,
             borderBottom: 1, 
             borderColor: 'divider', 
             bgcolor: 'white', 
@@ -26,16 +33,18 @@ function Header(props) {
           <IconButton>
             <SearchIcon />
           </IconButton>
-          <Stack direction='row'>
-            <Image alt="Logo" src={logo} width={70} height={80} priority />
-            <Typography
-              variant="h5"
-              color="darkred"
-              sx={{ width: '170px', fontWeight: 800 }}
-            >
-              {title}
-            </Typography>
-          </Stack>
+          <Image
+            alt="Logo with Caption"
+            src={logocaption}
+            width={200}
+            height={150}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'cover',
+            }}
+            priority
+          />
           <Stack direction='row'>
             <IconButton>
               <AccountCircle />
@@ -48,7 +57,7 @@ function Header(props) {
         <Toolbar
           component="nav"
           variant="dense"
-          sx={{ 
+          sx={{
             justifyContent: 'center',
             overflowX: 'hidden',
             color: 'white',
@@ -59,28 +68,16 @@ function Header(props) {
               color="inherit"
               noWrap
               key={section.title}
-              variant="body1"
+              variant="body2"
               href={section.url}
               underline="hover"
-              sx={{ pl: 3.5, pr: 3.5, flexShrink: 0 }}
+              sx={{ p: 2, flexShrink: 0 }}
             >
               {section.title}
             </Link>
           ))}
         </Toolbar>
       </AppBar>
-    </React.Fragment>
+    </Box>
   );
 }
-
-Header.propTypes = {
-  sections: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  title: PropTypes.string.isRequired,
-};
-
-export default Header;
