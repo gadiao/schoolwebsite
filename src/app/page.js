@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
-import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 import News from '@/components/News';
 import EventsBar from '@/components/EventsBar';
@@ -95,6 +95,7 @@ export default function HomePage() {
                 </Typography>
                 <Divider sx={{ mb: 5, bgcolor: 'text.secondary' }}/>
               </CardContent>
+              
               <EventsBar
                 title={eventsbar.title}
                 events={eventsbar.events}
