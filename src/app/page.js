@@ -95,11 +95,12 @@ export default function HomePage() {
                 </Typography>
                 <Divider sx={{ mb: 5, bgcolor: 'text.secondary' }}/>
               </CardContent>
-              
-              <EventsBar
-                title={eventsbar.title}
-                events={eventsbar.events}
-              />
+              <CardActionArea>
+                <EventsBar
+                  title={eventsbar.title}
+                  events={eventsbar.events}
+                />
+              </CardActionArea>
             </Card>
           </Grid>
         </Grid>
