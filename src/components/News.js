@@ -54,10 +54,6 @@ News.propTypes = {
     imageLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
-  bp: PropTypes.shape({
-    givenXS: PropTypes.number.isRequired,
-    givenMD: PropTypes.number.isRequired,
-  }),
 };
 
 export default News;
