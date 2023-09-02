@@ -60,11 +60,11 @@ export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
       <Hero />
-      <Container maxWidth="lg" sx={{ flexDirection: 'row', bgcolor: '#F3F3F3', py: 8 }}>
+      <Container maxWidth="lg" sx={{ flexDirection: 'row', bgcolor: '#F3F3F3', pb: 4 }}>
         <Grid container sx={{ justifyContent: 'center', mb: 8 }}>
-          <Grid item md={6} sx={{ mb: { xs: 4, md: 0 } }}>
-            <Card sx={{ p: 6, maxHeight: 750 }}>
-              <CardMedia>
+          <Grid item sm={9} md={6} sx={{ mb: { xs: 4, md: 0 }}}>
+            <Card sx={{ p: 6, height: { lg: 750 }  }}>
+              <CardMedia sx={{ px: 2 }}>
                 <Paper sx={{ position: 'relative', py: 20, mb: 1 }}>
                   <Image
                     alt="Founder"
@@ -75,41 +75,56 @@ export default function HomePage() {
                 </Paper>
               </CardMedia>
               <CardContent>
-                <Typography variant="h4" gutterBottom>
+                <Typography 
+                  variant="h5"
+                  gutterBottom 
+                  sx={{
+                    fontWeight: 'medium',
+                    mb: 4, 
+                  }}
+                >
                   {welcomeinfo.title}
                 </Typography>
-                <Typography variant="body2" paragraph>
+                <Typography variant="body1" paragraph>
                   {welcomeinfo.description}
                 </Typography>
-                <Link variant="body2" href="#">
+                <Link variant="subtitle1" href="#">
                   {welcomeinfo.linkText}
                 </Link>
               </CardContent>
             </Card>
           </Grid>
           <Grid item md={6}>
-            <Card sx={{ bgcolor: 'primary.main', maxHeight: 750 }}>
+            <Card sx={{ bgcolor: 'primary.main', height: { lg: 750 } }} >
               <CardContent>
-                <Typography variant="h4" gutterBottom sx={{ color: 'white' }}>
-                  Events
-                </Typography>
-                <Divider sx={{ mb: 5, bgcolor: 'text.secondary' }}/>
-              </CardContent>
-              <CardActionArea>
+                <Box sx={{ px: 2, pt: 2 }}>
+                  <Typography 
+                    variant="h4"
+                    gutterBottom 
+                    sx={{ fontWeight: 'medium', color: 'white' }}
+                  >
+                    Upcoming Events
+                  </Typography>
+                  <Divider sx={{ mb: 5, bgcolor: 'text.secondary' }}/>
+                </Box>
                 <EventsBar
                   title={eventsbar.title}
                   events={eventsbar.events}
                 />
-              </CardActionArea>
+              </CardContent>
             </Card>
           </Grid>
         </Grid>
-        <Grid container spacing={2} sx={{ justifyContent: 'center', mb: 8 }}>
+        <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
           <Grid item md={8}>
-            <Card sx={{ bgcolor: 'primary.main', maxHeight: 750 }}>
+            <Card sx={{ bgcolor: 'primary.main', p: 2}}>
               <CardContent>
-                <Typography variant="h4" sx={{ color: 'white' }} gutterBottom>
-                  News
+                <Typography 
+                  variant="h4"
+                  gutterBottom 
+                  sx={{ color: 'white', fontWeight: 'medium' }}
+                >
+                  Our Latest News
                 </Typography>
                 <Divider sx={{ mb: 5, bgcolor: 'text.secondary' }}/>
                 <Grid container spacing={2} sx={{ flexDirection: 'column' }}>
