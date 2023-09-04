@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
-import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
+import heroHome from '@/img/landingpage.png'
 import Hero from '@/components/Hero';
 import News from '@/components/News';
 import EventsBar from '@/components/EventsBar';
@@ -59,7 +60,7 @@ const eventsbar = {
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
-      <Hero />
+      <Hero imgSrc={ heroHome.src }/>
       <Container maxWidth="lg" sx={{ flexDirection: 'row', bgcolor: '#F3F3F3', pb: 4 }}>
         <Grid container sx={{ justifyContent: 'center', mb: 8 }}>
           <Grid item sm={9} md={6} sx={{ mb: { xs: 4, md: 0 }}}>

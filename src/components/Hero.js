@@ -1,18 +1,25 @@
 import * as React from 'react';
-import { Box, Paper } from '@mui/material';
+import PropTypes from 'prop-types';
+import { Paper } from '@mui/material';
 import Image from 'next/image';
-import landingpage from '@/img/landingpage.png'
 
-export default function Hero() {
+function Hero(props) {
+  const { imgSrc } = props;
 
   return (
     <Paper sx={{ position: 'relative', py: 30 }}>
       <Image
         alt="Landing Image"
-        src={landingpage.src}
+        src={ imgSrc }
         fill
-        style={{ objectFit: 'cover', }}
+        style={{ objectFit: 'cover' }}
       />
     </Paper>
   );
 }
+
+Hero.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+};
+
+export default Hero;

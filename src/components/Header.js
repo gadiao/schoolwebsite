@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { AppBar, Button, Box, IconButton, Link, Stack, Toolbar, Typography } from '@mui/material';
+import NextLink from 'next/link';
+import { Link as MUILink } from '@mui/material';
+import { AppBar, Button, Box, IconButton, Stack, Toolbar, Typography } from '@mui/material';
 import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -15,8 +17,7 @@ const sections = [
   { title: 'CONTACT', url: '#' },
 ];
 
-export default function Header(props) {
-
+export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -64,7 +65,7 @@ export default function Header(props) {
           }}
         >
           {sections.map((section) => (
-            <Link
+            <MUILink
               color="inherit"
               noWrap
               key={section.title}
@@ -72,9 +73,10 @@ export default function Header(props) {
               href={section.url}
               underline="hover"
               sx={{ p: 2, flexShrink: 0 }}
+              component={NextLink}
             >
               {section.title}
-            </Link>
+            </MUILink>
           ))}
         </Toolbar>
       </AppBar>

@@ -92,5 +92,5 @@ export default function Footer() {
         </Typography>
       </Grid>
     </Grid>
-  );d
+  );
 }
