@@ -12,7 +12,9 @@ function Hero(props) {
         alt={ givenAlt }
         src={ imgSrc }
         fill
-        style={{ objectFit: 'cover' }}
+        quality={65}
+        style={{ objectFit: 'cover', objectPosition: '50% 50%' }}
+        priority
       />
     </Paper>
   );
