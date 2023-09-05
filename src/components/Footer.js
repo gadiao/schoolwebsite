@@ -23,15 +23,15 @@ export default function Footer() {
       container 
       sx={{ 
         flexDirection: { xs: 'column', md: 'row'},
-        px: 4,
         bgcolor: 'primary.main',
         color: '#fff',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignContent: 'center'
       }}
     >
-      <Grid item sx={{ py: 2 }}>
+      <Grid item sx={{ py: 2, px: 6 }}>
         <Card sx={{ maxWidth: 200, maxHeight: 150 }}>
+          {/* Replace with transparent logo */}
           <CardMedia>
             <Image
               alt="Logo with Caption"
@@ -48,7 +48,7 @@ export default function Footer() {
           </CardMedia>
         </Card>
       </Grid>
-      <Grid item sx={{ py: 2 }}>
+      <Grid item sx={{ py: 2, px: 6}}>
         <Typography variant="h6" align="center" gutterBottom>
           Contact Us
         </Typography>
@@ -70,7 +70,8 @@ export default function Footer() {
         </Typography>
         <Copyright />
       </Grid>
-      <Grid item sx={{ py: 2 }}>
+      {/* Add a divider here**************** */}
+      <Grid item sx={{ py: 2, px: 6 }}>
         <Typography variant="h6" align="center" gutterBottom>
           Address
         </Typography>
