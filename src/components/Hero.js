@@ -4,12 +4,12 @@ import { Paper } from '@mui/material';
 import Image from 'next/image';
 
 function Hero(props) {
-  const { imgSrc } = props;
+  const { imgSrc, givenAlt } = props;
 
   return (
     <Paper sx={{ position: 'relative', py: 30 }}>
       <Image
-        alt="Landing Image"
+        alt={ givenAlt }
         src={ imgSrc }
         fill
         style={{ objectFit: 'cover' }}
@@ -20,6 +20,7 @@ function Hero(props) {
 
 Hero.propTypes = {
   imgSrc: PropTypes.string.isRequired,
+  givenAlt: PropTypes.string.isRequired,
 };
 
 export default Hero;

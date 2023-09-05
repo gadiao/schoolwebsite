@@ -6,7 +6,8 @@ import Hero from '@/components/Hero';
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
-      <Hero imgSrc={ "https://source.unsplash.com/zFSo6bnZJTw" } givenAlt={ "Full Classroom" }/>
+      {/* Change to an active map where the school is */}
+      <Hero imgSrc={ "https://source.unsplash.com/AFB6S2kibuk" } givenAlt={ "Maps" }/>
       <Container maxWidth="lg" sx={{ flexDirection: 'row', pb: 4 }}>
 
       </Container>

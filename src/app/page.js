@@ -60,7 +60,7 @@ const eventsbar = {
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
-      <Hero imgSrc={ heroHome.src }/>
+      <Hero imgSrc={ heroHome.src } givenAlt={ "Landing Image" }/>
       <Container maxWidth="lg" sx={{ flexDirection: 'row', bgcolor: '#F3F3F3', pb: 4 }}>
         <Grid container sx={{ justifyContent: 'center', mb: 8 }}>
           <Grid item sm={9} md={6} sx={{ mb: { xs: 4, md: 0 }}}>

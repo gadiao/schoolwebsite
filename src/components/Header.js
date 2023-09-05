@@ -8,13 +8,13 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import logocaption from '@/img/logocaption.jpg'
 
 const sections = [
-  { title: 'HOME', url: '#' },
-  { title: 'OUR SCHOOL', url: '#' },
-  { title: 'ACADEMICS', url: '#' },
-  { title: 'ADMISSIONS', url: '#' },
-  { title: 'EVENTS & NEWS', url: '#' },
-  { title: 'LEARNING TOOLS', url: '#' },
-  { title: 'CONTACT', url: '#' },
+  { title: 'HOME', url: '/' },
+  { title: 'OUR SCHOOL', url: '/ourschool' },
+  { title: 'ACADEMICS', url: '/academics' },
+  { title: 'ADMISSIONS', url: '/admissions' },
+  { title: 'EVENTS & NEWS', url: '/eventsnews' },
+  { title: 'LEARNING TOOLS', url: '/learningtools' },
+  { title: 'CONTACT', url: '/contact' },
 ];
 
 export default function Header() {
