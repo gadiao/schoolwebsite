@@ -7,7 +7,7 @@ function Hero(props) {
   const { imgSrc, givenAlt } = props;
 
   return (
-    <Paper sx={{ position: 'relative', py: 30 }}>
+    <Paper elevation={4} sx={{ position: 'relative', height: 500 }}>
       <Image
         alt={ givenAlt }
         src={ imgSrc }
