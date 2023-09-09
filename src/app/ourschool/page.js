@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { Link as MUILink } from '@mui/material';
-import { Box, Card, CardContent, CardMedia, Container, Paper, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 import founder from '@/img/founder.jpg'
 
@@ -24,13 +24,13 @@ export default function HomePage() {
           <Typography align='center' variant="h2" sx={{ py: 8, color: 'primary.main', fontWeight: 'medium' }}>
             OUR SCHOOL
           </Typography>
-          <Card sx={{ display: "flex", flexDirection: 'row', p: 4 }} >
-            <CardMedia sx={{ p: 2 }}>
+          <Grid container sx={{ flexDirection: {xs: 'column', md: 'row'}, px: 2, pb: 8 }} >
+            <Grid item md={6} sx={{ p: 4 }}>
               <Paper sx={{ position: 'relative', p: 20 }}>
                 <Image alt="Founder" src={founder.src} fill style={{ objectFit: 'cover' }} />
               </Paper>
-            </CardMedia>
-            <CardContent>
+            </Grid>
+            <Grid item md={6} sx={{ p: 4 }}>
               <Typography variant="h4" gutterBottom sx={{ fontWeight: 'medium', pb: 2 }}  >
                 {welcomeinfo.title}
               </Typography>
@@ -43,8 +43,12 @@ export default function HomePage() {
               <MUILink variant="subtitle1" href="/ourschool" component={NextLink}>
                 {welcomeinfo.linkText}
               </MUILink>
-            </CardContent>
-          </Card>
+            </Grid>
+          </Grid>
+          {/* Uses 2nd website template from here */}
+          <Typography align='center' variant="h4" gutterBottom sx={{ fontWeight: 'medium', pb: 8 }}  >
+            Meet Our Staff
+          </Typography>
         </Paper>
       </Container>
     </Box>
