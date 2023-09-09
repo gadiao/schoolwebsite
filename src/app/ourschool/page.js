@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Image from 'next/image';
-import NextLink from 'next/link';
-import { Link as MUILink } from '@mui/material';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 import Staff from '@/components/Staff';
