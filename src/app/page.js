@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Image from 'next/image';
-import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Link, Paper, Typography } from '@mui/material';
+import NextLink from 'next/link';
+import { Link as MUILink } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Paper, Typography } from '@mui/material';
 import heroHome from '@/img/landingpage.png'
 import Hero from '@/components/Hero';
 import News from '@/components/News';
@@ -56,7 +58,6 @@ const eventsbar = {
     { title: 'Student Achievement Committee Meeting', date: 'October 12, 10:00AM  - 10:00 PM', url: '#' },
   ]
 };
-
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
@@ -89,9 +90,9 @@ export default function HomePage() {
                 <Typography variant="body1" paragraph>
                   {welcomeinfo.description}
                 </Typography>
-                <Link variant="subtitle1" href="#">
+                <MUILink variant="subtitle1" href="/ourschool" component={NextLink}>
                   {welcomeinfo.linkText}
-                </Link>
+                </MUILink>
               </CardContent>
             </Card>
           </Grid>
@@ -118,7 +119,7 @@ export default function HomePage() {
         </Grid>
         <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
           <Grid item md={8}>
-            <Card sx={{ bgcolor: 'primary.main', p: 2}}>
+            <Card sx={{ bgcolor: 'primary.main', p: 2 }}>
               <CardContent>
                 <Typography 
                   variant="h4"
