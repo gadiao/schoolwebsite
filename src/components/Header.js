@@ -12,7 +12,8 @@ const sections = [
   { title: 'OUR SCHOOL', url: '/ourschool' },
   { title: 'ACADEMICS', url: '/academics' },
   { title: 'ADMISSIONS', url: '/admissions' },
-  { title: 'EVENTS & NEWS', url: '/eventsnews' },
+  { title: 'EVENTS', url: '/events' },
+  { title: 'NEWS', url: '/news' },
   { title: 'LEARNING TOOLS', url: '/learningtools' },
   { title: 'CONTACT', url: '/contact' },
 ];
