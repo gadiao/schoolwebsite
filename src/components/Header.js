@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
 import { Link as MUILink } from '@mui/material';
-import { AppBar, Button, IconButton, Paper, Stack, Toolbar } from '@mui/material';
+import { AppBar, Button, IconButton, Stack, Toolbar } from '@mui/material';
 import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
