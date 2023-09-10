@@ -74,10 +74,10 @@ export default function HomePage() {
           <Typography align='center' variant="h2" sx={{ pt: 8, pb: 2, color: 'primary.main', fontWeight: 'medium' }}>
             OUR SCHOOL
           </Typography>
-          <Typography align='center' variant='subtitle1' sx={{ pb: 8, px: { xs: 5, md: 25 } }}>
+          <Typography align='center' variant='subtitle1' sx={{ pb: 8, px: { xs: 5, md: 25 }, fontWeight: 'light', letterSpacing: 1 }}>
             I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. 
           </Typography>
-          <Grid container sx={{ flexDirection: { xs: 'column', md: 'row' }, pb: 6, px: 2 }} >
+          <Grid container sx={{ flexDirection: { xs: 'column', md: 'row' }, pb: 8, px: 2 }} >
             <Grid item md={6} sx={{ px: 4 }}>
               <Paper sx={{ position: 'relative', py: 25 }}>
                 <Image alt="Founder" src={founder.src} fill style={{ objectFit: 'cover' }} />
@@ -99,7 +99,7 @@ export default function HomePage() {
             </Grid>
           </Grid>
           {/* Uses 2nd website template from here */}
-          <Typography align='center' variant="h2" sx={{ py: 8, color: 'primary.main', fontWeight: 'medium' }}>
+          <Typography align='center' variant="h2" sx={{ pb: 8, color: 'primary.main', fontWeight: 'medium' }}>
             STAFF DIRECTORY
           </Typography>
           <Grid container sx={{ flexDirection: { xs: 'column', md: 'row' }, px: 3 }}>
