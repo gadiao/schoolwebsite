@@ -71,8 +71,11 @@ export default function HomePage() {
       <Hero imgSrc={ "https://source.unsplash.com/E813FON0wDQ/2400x1600" } givenAlt={ "Empty Classroom" }/>
       <Container maxWidth="lg" sx={{ flexDirection: 'row', pb: 8 }}>
         <Paper>
-          <Typography align='center' variant="h2" sx={{ py: 8, color: 'primary.main', fontWeight: 'medium' }}>
+          <Typography align='center' variant="h2" sx={{ pt: 8, pb: 2, color: 'primary.main', fontWeight: 'medium' }}>
             OUR SCHOOL
+          </Typography>
+          <Typography align='center' variant='subtitle1' sx={{ pb: 8, px: { xs: 5, md: 25 } }}>
+            I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. 
           </Typography>
           <Grid container sx={{ flexDirection: { xs: 'column', md: 'row' }, pb: 6, px: 2 }} >
             <Grid item md={6} sx={{ px: 4 }}>
