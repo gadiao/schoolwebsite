@@ -56,7 +56,7 @@ const Subject = ( props ) => {
 
 export default function Subjects() {
   return (
-    <Grid container spacing={2} sx={{ mb: 4, px: 4 }}>
+    <Grid container spacing={2} sx={{ pb: 4, px: 4 }}>
       {subjects.map((subject) => (
         <Subject key={subject.name} subject={subject}/>
       ))}
