@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Grid, Typography, Icon } from '@mui/material';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
@@ -43,30 +42,21 @@ const subjects = [
   },
 ];
 
-const Subject = (props) => {
+const Subject = ( props ) => {
   const { subject } = props;
   
   return (
-    <Grid container xs={12} sm={4} sx={{ flexDirection: 'column', alignItems: 'center', mb: 4 }}>
-      <Icon component={subject.icon} sx={{ fontSize: 75, color: 'primary.main' }}></Icon>
-      <Typography variant='h6' sx={{ py: 2 }}>{subject.name}</Typography>
-      <Typography variant='body2' align='center' sx={{ fontWeight: 'light', px: 4 }}>{subject.desc}</Typography>
+    <Grid item xs={12} sm={4} sx={{ display: 'flex', flexDirection: 'column', alignItems:'center', mb: 4 }}>
+      <Icon component={subject.icon} sx={{ fontSize: 75, color: 'primary.main' }} />
+      <Typography variant='h6' align='center' sx={{ py: 2 }}>{subject.name}</Typography>
+      <Typography variant='subtitle2' align='center' sx={{ fontWeight: 'light', px: 3 }}>{subject.desc}</Typography>
     </Grid>
   )
 };
 
-Subject.propTypes = {
-  subject: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    icon: PropTypes.object.isRequired,
-    desc: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
 export default function Subjects() {
   return (
-    <Grid container sx={{ pb: 4 }}>
+    <Grid container spacing={2} sx={{ mb: 4, px: 4 }}>
       {subjects.map((subject) => (
         <Subject key={subject.name} subject={subject}/>
       ))}
