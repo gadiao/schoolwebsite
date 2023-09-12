@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 import Subjects from  '@/components/Subjects'
