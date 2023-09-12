@@ -2,52 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
-import HistoryEduTwoToneIcon from '@mui/icons-material/HistoryEduTwoTone';
-import DriveFileRenameOutlineTwoToneIcon from '@mui/icons-material/DriveFileRenameOutlineTwoTone';
-import CalculateTwoToneIcon from '@mui/icons-material/CalculateTwoTone';
-import ScienceTwoToneIcon from '@mui/icons-material/ScienceTwoTone';
-import ExploreTwoToneIcon from '@mui/icons-material/ExploreTwoTone';
-import SportsTennisTwoToneIcon from '@mui/icons-material/SportsTennisTwoTone';
-
-const staff = [
-  {
-    name: 'Literacy',
-    title: 'PRINCIPAL',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-  {
-    name: 'Writing',
-    title: 'ASSISTANT PRINCIPAL',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-  {
-    name: 'Mathematics',
-    title: 'PARENT COORDINATOR',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-  {
-    name: 'Science',
-    title: 'PARENT COORDINATOR',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-  {
-    name: 'Geography',
-    title: 'TEACHER - SOCIAL STUDIES',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-  {
-    name: 'Physical Education',
-    title: 'TEACHER - PHYSICAL EDUCATION',
-    email: 'info@mysite.com',
-    phone: '123-456-7890'
-  },
-]
-
+import Subjects from  '@/components/Subjects'
 
 export default function Academics() {
   return (
@@ -63,6 +18,7 @@ export default function Academics() {
           </Typography>
           {/* Iterate through icons by passing component as a prop */}
           {/* https://www.developerway.com/posts/react-component-as-prop-the-right-way */}
+          <Subjects />
         </Paper>
       </Container>
     </Box>
