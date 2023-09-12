@@ -66,7 +66,7 @@ Subject.propTypes = {
 
 export default function Subjects() {
   return (
-    <Grid container sx={{ mb: 4 }}>
+    <Grid container sx={{ pb: 4 }}>
       {subjects.map((subject) => (
         <Subject key={subject.name} subject={subject}/>
       ))}
