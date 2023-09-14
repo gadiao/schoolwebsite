@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Grid, Paper, Typography} from '@mui/material';
 
 function News(props) {
   const { post } = props;
@@ -11,23 +11,24 @@ function News(props) {
       <CardActionArea component="a" href="#">
         <Card 
           sx={{ 
-            height: 200, 
+            height: 250, 
             display: "flex", 
             flexDirection: 'row'
           }}
         >
-          <CardMedia sx={{ height: 200 }}>
-            <Image
-              alt="Random image"
-              src="https://source.unsplash.com/random"
-              width={600}
-              height={400}
-              style={{
-                maxWidth: '100%',
-                maxHeight: '100%',
-                objectFit: 'cover',
-              }}
-            />
+          <CardMedia>
+            <Paper sx={{ position: 'relative', height: 250, width: { xs: 200, sm: 250 } }}>
+              <Image
+                alt={"Random image"}
+                src={"https://source.unsplash.com/random?wallpapers"}
+                fill
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            </Paper>
           </CardMedia>
           <CardContent>
             <Typography variant="h6">
