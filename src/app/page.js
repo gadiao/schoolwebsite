@@ -151,29 +151,25 @@ export default function HomePage() {
             </Card>
           </Grid>
         </Grid>
-        <Grid container spacing={2} sx={{ justifyContent: "center" }}>
-          <Grid item md={8}>
-            <Card sx={{ bgcolor: "primary.main", p: 2 }}>
-              <CardContent>
-                <Typography
-                  variant="h4"
-                  gutterBottom
-                  sx={{ color: "white", fontWeight: "medium" }}
-                >
-                  Our Latest News
-                </Typography>
-                <Divider sx={{ mb: 5, bgcolor: "text.secondary" }} />
-                <Grid container spacing={2} sx={{ flexDirection: "column", px: { xs: 0, lg: 5 }  }}>
-                  {news.map((post) => (
-                    <News
-                      key={post.title}
-                      bp={{ xs: 200, sm: 250, lg: 250 }}
-                      post={post}
-                    />
-                  ))}
-                </Grid>
-              </CardContent>
-            </Card>
+        <Grid container sx={{ justifyContent: "center" }}>
+          <Grid item md={8} sx={{ pr: { xs: 0, md: 8 } }}>
+            <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ fontWeight: "medium" }}
+            >
+              Our Latest News
+            </Typography>
+            <Divider sx={{ mb: 5 }} />
+            <Grid container spacing={2} sx={{ flexDirection: "column" }}>
+              {news.map((post) => (
+                <News
+                  key={post.title}
+                  bp={{ xs: 200, sm: 250, lg: 250 }}
+                  post={post}
+                />
+              ))}
+            </Grid>
           </Grid>
           <Grid item md={4}>
             <MoreInfo />
