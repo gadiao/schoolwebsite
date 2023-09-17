@@ -67,8 +67,8 @@ export default function HomePage() {
               flexDirection: "column",
               justifyContent: "centre",
               alignItems: "centre",
-              px: { xs: 5, md: 25, lg: 10 },
-              pb: 4 
+              px: { xs: 5, md: 10 },
+              pb: 4
             }}
           >
             {news.map((post) => (
