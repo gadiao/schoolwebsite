@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
 import { Link as MUILink } from '@mui/material';
-import { AppBar, Button, IconButton, Stack, Toolbar } from '@mui/material';
+import { AppBar, Button, Divider, IconButton, Stack, Toolbar } from '@mui/material';
 import Image from 'next/image';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -22,7 +22,6 @@ export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar
-        variant="dense"
         sx={{
           borderBottom: 1,
           borderColor: 'divider', 
@@ -59,6 +58,7 @@ export default function Header() {
         component="nav"
         variant="dense"
         sx={{
+          display: { xs: 'none', md: 'flex' },
           justifyContent: 'center',
           overflowX: 'hidden',
           color: 'white',
@@ -79,6 +79,7 @@ export default function Header() {
           </MUILink>
         ))}
       </Toolbar>
+      <Divider sx={{ display: { xs: 'block', md: 'none' }, bgcolor: 'primary.main', py: 0.5 }} />
     </AppBar>
   );
 }
