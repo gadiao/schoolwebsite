@@ -22,7 +22,7 @@ const sections = [
 
 export default function Header() {
   return (
-    <AppBar position="relative" >
+    <AppBar position="relative" sx={{ zIndex: 'drawer', }}>
       <Toolbar
         variant="dense"
         sx={{
@@ -36,7 +36,7 @@ export default function Header() {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Paper elevation={0} sx={{ display: 'none' }}>
+        <Paper elevation={0} sx={{ display: { xs: 'block', md: 'none' } }}>
           <Image
             alt="Logo with Caption"
             src={logocaption}
@@ -66,11 +66,10 @@ export default function Header() {
           display: { xs: 'none', md: 'flex' },
           justifyContent: 'center',
           color: 'white',
-          zIndex: 'drawer',
           height: 50
         }}
       >
-        <Paper elevation={4} sx={{ width: 200, height: 150 }}>
+        <Paper elevation={4} sx={{ alignSelf: 'flex-start', width: 200, height: 150 }}>
           <Image
             alt="Logo with Caption"
             src={logocaption}
