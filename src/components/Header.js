@@ -20,22 +20,6 @@ const sections = [
   { title: 'CONTACT', url: '/contact' },
 ];
 
-const theme = createTheme({
-  components: {
-    // Name of the component ⚛️
-    MuiPaper: {
-      styleOverrides: {
-        // Name of the slot
-        root: {
-          // Some CSS
-          overflow: 'visible',
-        },
-      },
-    },
-  }
-});
-
-
 export default function Header() {
   return (
     <AppBar position="relative" >
@@ -86,18 +70,16 @@ export default function Header() {
           height: 50
         }}
       >
-        <ThemeProvider theme={theme}>
-          <Paper elevation={4} sx={{ width: 200, height: 150 }}>
-            <Image
-              alt="Logo with Caption"
-              src={logocaption}
-              width={200}
-              height={150}
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-          </Paper>
-        </ThemeProvider>
+        <Paper elevation={4} sx={{ width: 200, height: 150 }}>
+          <Image
+            alt="Logo with Caption"
+            src={logocaption}
+            width={200}
+            height={150}
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+        </Paper>
         {sections.map((section) => (
           <MUILink
             color="inherit"
