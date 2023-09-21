@@ -1,13 +1,9 @@
-'use client';
-
 import * as React from 'react';
 import NextLink from 'next/link';
 import { Link as MUILink } from '@mui/material';
-import { AppBar, Box, Button, Divider, IconButton, Menu, Paper, Stack, Toolbar } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { AppBar, Button, Divider, IconButton, Menu, Paper, Stack, Toolbar } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import logocaption from '@/img/logocaption.jpg'
 
 const sections = [
@@ -34,7 +30,7 @@ export default function Header() {
         }}
       >
         <IconButton>
-          <SearchIcon />
+          <MenuIcon />
         </IconButton>
         <Paper elevation={0} sx={{ display: { xs: 'block', md: 'none' } }}>
           <Image
@@ -50,14 +46,9 @@ export default function Header() {
             priority
           />
         </Paper>
-        <Stack direction='row'>
-          <IconButton>
-            <AccountCircle />
-          </IconButton>
-          <Button variant="text">
-            LOG IN
-          </Button>
-        </Stack>
+        <Button variant="text">
+          LOGIN
+        </Button>
       </Toolbar>
       <Toolbar
         component="nav"
