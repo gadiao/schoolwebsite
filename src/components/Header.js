@@ -52,7 +52,7 @@ export default function Header() {
             LOGIN
           </Button>
         </Stack>
-        <IconButton sx={{ display: { xs: 'flex', md: 'none' } }}>
+        <IconButton sx={{ display: { xs: 'flex', md: 'none' }, ml: 20 }}>
           <MenuIcon sx={{ fontSize: 35 }}/>
         </IconButton>
       </Toolbar>
