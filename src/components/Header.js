@@ -4,6 +4,7 @@ import { Link as MUILink } from '@mui/material';
 import { AppBar, Button, Divider, IconButton, Menu, Paper, Stack, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import logocaption from '@/img/logocaption.jpg'
 
 const sections = [
@@ -26,13 +27,10 @@ export default function Header() {
           borderColor: 'divider', 
           bgcolor: '#FDFDFD', 
           color: 'black',
-          justifyContent: 'space-between',
+          justifyContent: { xs: 'space-around', md: 'flex-end' },
         }}
       >
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-        <Paper elevation={0} sx={{ display: { xs: 'block', md: 'none' } }}>
+        <Paper elevation={0} sx={{ display: { xs: 'flex', md: 'none' } }}>
           <Image
             alt="Logo with Caption"
             src={logocaption}
@@ -46,9 +44,17 @@ export default function Header() {
             priority
           />
         </Paper>
-        <Button variant="text">
-          LOGIN
-        </Button>
+        <Stack direction='row' sx ={{ display: { xs: 'none', md: 'flex' } }}>
+          <IconButton>
+            <AccountCircle />
+          </IconButton>
+          <Button variant="text">
+            LOGIN
+          </Button>
+        </Stack>
+        <IconButton sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <MenuIcon sx={{ fontSize: 35 }}/>
+        </IconButton>
       </Toolbar>
       <Toolbar
         component="nav"
