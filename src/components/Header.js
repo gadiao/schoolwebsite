@@ -30,19 +30,24 @@ export default function Header() {
           justifyContent: { xs: 'space-around', md: 'flex-end' }
         }}
       >
-        <Paper elevation={0} sx={{ display: { xs: 'flex', md: 'none' }, ml: {xs: 5, sm: 20} }}>
-          <Image
-            alt="Logo with Caption"
-            src={logocaption}
-            width={200}
-            height={150}
-            style={{
-              maxWidth: '100%',
-              maxHeight: '100%',
-              objectFit: 'cover'
-            }}
-            priority
-          />
+        <Paper elevation={0} sx={{ display: { xs: 'flex', md: 'none' }, ml: { xs: 5, sm: 20 } }}>
+          <MUILink
+            href="/"
+            component={NextLink}
+          >
+            <Image
+              alt="Logo with Caption"
+              src={logocaption}
+              width={200}
+              height={150}
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                objectFit: 'cover'
+              }}
+              priority
+            />
+          </MUILink>
         </Paper>
         <Stack direction='row' sx ={{ display: { xs: 'none', md: 'flex' } }}>
           <IconButton>
@@ -67,14 +72,19 @@ export default function Header() {
         }}
       >
         <Paper elevation={4} sx={{ alignSelf: 'flex-start', width: 200, height: 150 }}>
-          <Image
-            alt="Logo with Caption"
-            src={logocaption}
-            width={200}
-            height={150}
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+          <MUILink
+            href="/"
+            component={NextLink}
+          >
+            <Image
+              alt="Logo with Caption"
+              src={logocaption}
+              width={200}
+              height={150}
+              style={{ objectFit: 'cover' }}
+              priority
+            />
+          </MUILink>
         </Paper>
         {sections.map((section) => (
           <MUILink
