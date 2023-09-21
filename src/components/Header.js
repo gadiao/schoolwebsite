@@ -27,10 +27,10 @@ export default function Header() {
           borderColor: 'divider', 
           bgcolor: '#FDFDFD', 
           color: 'black',
-          justifyContent: { xs: 'space-around', md: 'flex-end' },
+          justifyContent: { xs: 'space-around', md: 'flex-end' }
         }}
       >
-        <Paper elevation={0} sx={{ display: { xs: 'flex', md: 'none' } }}>
+        <Paper elevation={0} sx={{ display: { xs: 'flex', md: 'none' }, ml: {xs: 5, sm: 20} }}>
           <Image
             alt="Logo with Caption"
             src={logocaption}
@@ -39,7 +39,7 @@ export default function Header() {
             style={{
               maxWidth: '100%',
               maxHeight: '100%',
-              objectFit: 'cover',
+              objectFit: 'cover'
             }}
             priority
           />
