@@ -34,7 +34,6 @@ const sections = [
 ];
 
 function TopBar() {
-  // Place TopBar here
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -121,13 +120,12 @@ function TopBar() {
         anchor="right"
         open={open}
         onClose={() => {
-          handleOpen();
+          handleClose();
         }}
       >
         <NavList />
       </Drawer>
     </Toolbar>
-    
   );
 }
 
