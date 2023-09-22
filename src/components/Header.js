@@ -24,6 +24,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import logocaption from "@/img/logocaption.jpg";
 
 const sections = [
+  { title: "HOME", url: "/" },
   { title: "OUR SCHOOL", url: "/ourschool" },
   { title: "ACADEMICS", url: "/academics" },
   { title: "ADMISSIONS", url: "/admissions" },
@@ -34,7 +35,7 @@ const sections = [
 ];
 
 function TopBar() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
