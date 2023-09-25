@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import NextLink from "next/link";
 import { Link as MUILink } from "@mui/material";
@@ -22,6 +24,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import logocaption from "@/img/logocaption.jpg";
 
 const sections = [
+  { title: "HOME", url: "/" },
   { title: "OUR SCHOOL", url: "/ourschool" },
   { title: "ACADEMICS", url: "/academics" },
   { title: "ADMISSIONS", url: "/admissions" },
@@ -130,7 +133,7 @@ function TopBar() {
 export default function Header() {
   return (
     <AppBar position="relative" sx={{ zIndex: "drawer" }}>
-      {/* <TopBar /> */}
+      <TopBar />
       <Toolbar
         component="nav"
         variant="dense"
@@ -156,7 +159,7 @@ export default function Header() {
             />
           </MUILink>
         </Paper>
-        {sections.map((section) => (
+        {sections.slice(1,).map((section) => (
           <MUILink
             color="inherit"
             noWrap
