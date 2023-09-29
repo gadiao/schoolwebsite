@@ -88,6 +88,7 @@ const eventsbar = {
     },
   ],
 };
+
 export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
