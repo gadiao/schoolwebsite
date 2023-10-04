@@ -89,7 +89,10 @@ const eventsbar = {
   ],
 };
 
+// Transitions would be nice but without making this a client js
+
 export default function HomePage() {
+
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero imgSrc={heroHome.src} givenAlt={"Landing Image"} />
