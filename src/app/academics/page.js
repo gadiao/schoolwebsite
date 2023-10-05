@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import Hero from "@/components/Hero";
-import Subjects from "@/components/Subjects";
+import Subjects from "@/components/Academics/Subjects";
 
 export default function Academics() {
   return (
