@@ -1,97 +1,73 @@
 import * as React from "react";
 import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Box,
   Container,
-  Grid,
   Paper,
   Typography,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Hero from "@/components/Hero";
-
-const eventsbar = {
-  events: [
-    { title: "Board Meeting", date: "August 24, 7:00 PM - 9:00 PM", url: "#" },
-    { title: "Labour Day", date: "September 4, All Day", url: "#" },
-    {
-      title: "First Day of School for Students",
-      date: "September 5, All Day",
-      url: "#",
-    },
-    {
-      title: "Governance and Policy Committee Meeting",
-      date: "September 5, 7:00 PM - 9:00 PM",
-      url: "#",
-    },
-    {
-      title: "Board Meeting",
-      date: "September 7, 7:00 PM - 9:00 PM",
-      url: "#",
-    },
-    { title: "Labour Day", date: "September 9, 10:00AM  - 10:00 PM", url: "#" },
-    {
-      title: "First Day of School for Students",
-      date: "September 12, 10:00AM  - 10:00 PM",
-      url: "#",
-    },
-    {
-      title: "Student Achievement Committee Meeting",
-      date: "October 12, 10:00AM  - 10:00 PM",
-      url: "#",
-    },
-  ],
-};
-
-function BasicAccordion() {
-  return (
-    <div>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Accordion 2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+import EventsAccordion from "@/components/Events/EventsAccordion";
 
 
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>Disabled Accordion</Typography>
-        </AccordionSummary>
-      </Accordion>
-    </div>
-  );
-}
+// Back-end injection here for events
+const events = [
+  {
+    title: "Board Meeting",
+    date: "August 24, 7:00 PM - 9:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Labour Day",
+    date: "September 4, All Day",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "First Day of School for Students",
+    date: "September 5, All Day",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Governance and Policy Committee Meeting",
+    date: "September 5, 7:00 PM - 9:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Board Meeting",
+    date: "September 7, 7:00 PM - 9:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Labour Day",
+    date: "September 9, 10:00AM  - 10:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "First Day of School for Students",
+    date: "September 12, 10:00AM  - 10:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Student Achievement Committee Meeting",
+    date: "October 12, 10:00AM  - 10:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+]
 
 export default function Events() {
   return (
@@ -105,12 +81,18 @@ export default function Events() {
           <Typography
             align="center"
             variant="h2"
-            sx={{ pt: 8, pb: 8, mb: 2, color: "primary.main", fontWeight: "medium" }}
+            sx={{
+              pt: 8,
+              pb: 8,
+              mb: 2,
+              color: "primary.main",
+              fontWeight: "medium",
+            }}
           >
             EVENTS
           </Typography>
         </Paper>
-        <BasicAccordion />
+        <EventsAccordion events={events}/>
       </Container>
     </Box>
   );

@@ -56,38 +56,36 @@ const news = [
   },
 ];
 
-const eventsbar = {
-  events: [
-    { title: "Board Meeting", date: "August 24, 7:00 PM - 9:00 PM", url: "#" },
-    { title: "Labour Day", date: "September 4, All Day", url: "#" },
-    {
-      title: "First Day of School for Students",
-      date: "September 5, All Day",
-      url: "#",
-    },
-    {
-      title: "Governance and Policy Committee Meeting",
-      date: "September 5, 7:00 PM - 9:00 PM",
-      url: "#",
-    },
-    {
-      title: "Board Meeting",
-      date: "September 7, 7:00 PM - 9:00 PM",
-      url: "#",
-    },
-    { title: "Labour Day", date: "September 9, 10:00AM  - 10:00 PM", url: "#" },
-    {
-      title: "First Day of School for Students",
-      date: "September 12, 10:00AM  - 10:00 PM",
-      url: "#",
-    },
-    {
-      title: "Student Achievement Committee Meeting",
-      date: "October 12, 10:00AM  - 10:00 PM",
-      url: "#",
-    },
-  ],
-};
+const events = [
+  { title: "Board Meeting", date: "August 24, 7:00 PM - 9:00 PM", url: "#" },
+  { title: "Labour Day", date: "September 4, All Day", url: "#" },
+  {
+    title: "First Day of School for Students",
+    date: "September 5, All Day",
+    url: "#",
+  },
+  {
+    title: "Governance and Policy Committee Meeting",
+    date: "September 5, 7:00 PM - 9:00 PM",
+    url: "#",
+  }, 
+  {
+    title: "Board Meeting",
+    date: "September 7, 7:00 PM - 9:00 PM",
+    url: "#",
+  },
+  { title: "Labour Day", date: "September 9, 10:00AM  - 10:00 PM", url: "#" },
+  {
+    title: "First Day of School for Students",
+    date: "September 12, 10:00AM  - 10:00 PM",
+    url: "#",
+  },
+  {
+    title: "Student Achievement Committee Meeting",
+    date: "October 12, 10:00AM  - 10:00 PM",
+    url: "#",
+  },
+]
 
 // Transitions would be nice but without making this a client js
 
@@ -150,7 +148,7 @@ export default function HomePage() {
                   </Typography>
                   <Divider sx={{ mb: 5, bgcolor: "text.secondary" }} />
                 </Box>
-                <EventsBar title={eventsbar.title} events={eventsbar.events} />
+                <EventsBar events={events} />
               </CardContent>
             </Card>
           </Grid>
