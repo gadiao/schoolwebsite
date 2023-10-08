@@ -42,23 +42,9 @@ export default function HomePage() {
           <Typography
             align="center"
             variant="h2"
-            sx={{ pt: 8, pb: 2, color: "primary.main", fontWeight: "medium" }}
+            sx={{ pt: 8, pb: 4, color: "primary.main", fontWeight: "medium" }}
           >
             NEWS
-          </Typography>
-          <Typography
-            align="center"
-            variant="subtitle1"
-            sx={{
-              pb: 8,
-              px: { xs: 5, md: 25 },
-              fontWeight: "light",
-              letterSpacing: 1,
-            }}
-          >
-            I'm a paragraph. Click here to add your own text and edit me. It’s
-            easy. Just click “Edit Text” or double click me to add your own
-            content and make changes to the font.
           </Typography>
           <Grid
             container

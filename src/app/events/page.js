@@ -10,6 +10,10 @@ import EventsAccordion from "@/components/Events/EventsAccordion";
 
 
 // Back-end injection here for events
+//============================================
+// Requirements:
+// - date converted to Date type
+// - unique keys
 const events = [
   {
     title: "Board Meeting",
@@ -42,20 +46,6 @@ const events = [
   {
     title: "Board Meeting",
     date: "September 7, 7:00 PM - 9:00 PM",
-    addr: "Stapledon Gardens, Albatross Road",
-    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
-    url: "#",
-  },
-  {
-    title: "Labour Day",
-    date: "September 9, 10:00AM  - 10:00 PM",
-    addr: "Stapledon Gardens, Albatross Road",
-    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
-    url: "#",
-  },
-  {
-    title: "First Day of School for Students",
-    date: "September 12, 10:00AM  - 10:00 PM",
     addr: "Stapledon Gardens, Albatross Road",
     desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
     url: "#",
