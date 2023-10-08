@@ -30,7 +30,6 @@ const sections = [
   { title: "ADMISSIONS", url: "/admissions" },
   { title: "EVENTS", url: "/events" },
   { title: "NEWS", url: "/news" },
-  { title: "LEARNING TOOLS", url: "/learningtools" },
   { title: "CONTACT", url: "/contact" },
 ];
 

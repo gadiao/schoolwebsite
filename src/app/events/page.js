@@ -14,6 +14,7 @@ import EventsAccordion from "@/components/Events/EventsAccordion";
 // Requirements:
 // - date converted to Date type
 // - unique keys
+// - remove previous events
 const events = [
   {
     title: "Board Meeting",
@@ -74,7 +75,6 @@ export default function Events() {
             sx={{
               pt: 8,
               pb: 8,
-              mb: 2,
               color: "primary.main",
               fontWeight: "medium",
             }}

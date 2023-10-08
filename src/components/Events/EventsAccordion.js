@@ -1,16 +1,17 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import {
   Accordion,
+  AccordionActions,
   AccordionSummary,
   AccordionDetails,
+  Button,
   Grid,
   Typography,
 } from "@mui/material";
 import PropTypes from "prop-types";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CircleIcon from '@mui/icons-material/Circle';
 
 function EventsAccordion(props) {
   const { events } = props;
@@ -23,29 +24,28 @@ function EventsAccordion(props) {
             expandIcon={<ExpandMoreIcon />}
             // aria-controls="panel1a-content"
             // id="panel1a-header"
-            
           >
             <Grid container spacing={3}>
-              <Grid item md={2.5}>
-                <Typography align='center'>{event.date}</Typography>
+              <Grid item md={4}>
+                <Typography align="center">{event.date}</Typography>
               </Grid>
               <Grid item>
-                <CircleIcon color="primary"/>
-              </Grid>
-              <Grid item>
-                <Typography variant="h6">{event.title}</Typography>
+                <Typography variant="h5" color="primary" sx={{ textOverflow: "ellipsis" }}>
+                  {event.title}
+                </Typography>
               </Grid>
             </Grid>
           </AccordionSummary>
           <AccordionDetails>
             <Typography sx={{ mb: 2 }}>{"Address: " + event.addr}</Typography>
-
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              I’m an event description. Click here to open up the Event Editor
+              and change my text.
             </Typography>
           </AccordionDetails>
+          <AccordionActions sx={{ justifyContent: "center" }}>
+            <Button>More Info</Button>
+          </AccordionActions>
         </Accordion>
       ))}
     </React.Fragment>
