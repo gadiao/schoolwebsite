@@ -19,20 +19,20 @@ function EventsAccordion(props) {
   return (
     <React.Fragment>
       {events.map((event) => (
-        <Accordion key={event.title}>
+        <Accordion key={event.title} sx={{ py: 1 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             // aria-controls="panel1a-content"
             // id="panel1a-header"
           >
-            <Grid container spacing={3}>
-              <Grid item md={4}>
-                <Typography align="center">{event.date}</Typography>
-              </Grid>
-              <Grid item>
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={8} lg={6}>
                 <Typography variant="h5" color="primary" sx={{ textOverflow: "ellipsis" }}>
                   {event.title}
                 </Typography>
+              </Grid>
+              <Grid item xs={6} md={4} lg={6}>
+                <Typography variant="subtitle1">{event.date}</Typography>
               </Grid>
             </Grid>
           </AccordionSummary>
@@ -44,6 +44,7 @@ function EventsAccordion(props) {
             </Typography>
           </AccordionDetails>
           <AccordionActions sx={{ justifyContent: "center" }}>
+            {/* Button to be reinputted to seperate unique page template */}
             <Button>More Info</Button>
           </AccordionActions>
         </Accordion>
