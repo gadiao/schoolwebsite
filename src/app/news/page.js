@@ -42,7 +42,7 @@ export default function HomePage() {
           <Typography
             align="center"
             variant="h2"
-            sx={{ pt: 8, pb: 4, color: "primary.main", fontWeight: "medium" }}
+            sx={{ pt: 8, pb: 4 , color: "primary.main", fontWeight: "medium" }}
           >
             NEWS
           </Typography>
