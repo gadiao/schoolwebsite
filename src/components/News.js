@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
@@ -6,6 +8,7 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Fade,
   Grid,
   Paper,
   Typography,
@@ -15,48 +18,52 @@ function News(props) {
   const { bp, post } = props;
 
   return (
-    <Grid item>
-      <CardActionArea component="a" href="#">
-        {/* Edit to match school website news posts */}
-        <Card
-          sx={{
-            height: { xs: 300, lg: 350 },
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <CardMedia>
-            <Paper
-              sx={{
-                position: "relative",
-                height: { xs: 300, lg: 350 },
-                width: { xs: bp.xs, sm: bp.sm, lg: bp.lg },
-              }}
-            >
-              <Image
-                alt={"Random image"}
-                src={post.image}
-                fill
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  objectFit: "cover",
+    // Can check for on scroll
+    <Fade in={true} timeout={400}>
+      <Grid item>
+        <CardActionArea component="a" href="#">
+          {/* Edit to match school website news posts */}
+          <Card
+            sx={{
+              height: { xs: 300, lg: 350 },
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <CardMedia>
+              <Paper
+                sx={{
+                  position: "relative",
+                  height: { xs: 300, lg: 350 },
+                  width: { xs: bp.xs, sm: bp.sm, lg: bp.lg },
                 }}
-              />
-            </Paper>
-          </CardMedia>
-          <CardContent sx={{ mx: 4, mt: 1 }}>
-            <Typography variant="h4" sx={{ fontWeight: 'medium' }}>{post.title}</Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-              {post.date}
-            </Typography>
-            <Typography variant="body1" paragraph>
-              {post.description}
-            </Typography>
-          </CardContent>
-        </Card>
-      </CardActionArea>
-    </Grid>
+              >
+                <Image
+                  alt={"Random image"}
+                  src={post.image}
+                  fill
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </Paper>
+            </CardMedia>
+            <CardContent sx={{ mx: 4, mt: 1 }}>
+              <Typography variant="h4" sx={{ fontWeight: 'medium' }}>{post.title}</Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                {post.date}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                {post.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        </CardActionArea>
+      </Grid>
+    </Fade>
+    
   );
 }
 
