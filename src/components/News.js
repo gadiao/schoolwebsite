@@ -17,9 +17,10 @@ function News(props) {
   return (
     <Grid item>
       <CardActionArea component="a" href="#">
+        {/* Edit to match school website news posts */}
         <Card
           sx={{
-            height: { xs: bp.xs, lg: bp.lg },
+            height: { xs: 300, lg: 350 },
             display: "flex",
             flexDirection: "row",
           }}
@@ -28,13 +29,13 @@ function News(props) {
             <Paper
               sx={{
                 position: "relative",
-                height: { xs: bp.xs, lg: bp.lg },
+                height: { xs: 300, lg: 350 },
                 width: { xs: bp.xs, sm: bp.sm, lg: bp.lg },
               }}
             >
               <Image
                 alt={"Random image"}
-                src={"https://source.unsplash.com/random?wallpapers"}
+                src={post.image}
                 fill
                 style={{
                   maxWidth: "100%",
@@ -44,8 +45,8 @@ function News(props) {
               />
             </Paper>
           </CardMedia>
-          <CardContent>
-            <Typography variant="h6">{post.title}</Typography>
+          <CardContent sx={{ mx: 4, mt: 1 }}>
+            <Typography variant="h4" sx={{ fontWeight: 'medium' }}>{post.title}</Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
               {post.date}
             </Typography>

@@ -51,6 +51,25 @@ const nextConfig = {
         port: '',
         pathname: '/AFB6S2kibuk/2400x1600',
       },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        port: '',
+        pathname: '/sEgodrJdMGw',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        port: '',
+        pathname: '/505eectW54k',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        port: '',
+        pathname: '/OyCl7Y4y0Bk',
+      },
+      
     ],
   },
 };
