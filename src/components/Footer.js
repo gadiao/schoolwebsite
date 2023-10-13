@@ -11,10 +11,7 @@ import {
   Fade,
   Grid,
   Link,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
+  Stack,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
@@ -54,6 +51,7 @@ export default function Footer() {
         display: "flex",
         bgcolor: "primary.main",
         justifyContent: "center",
+        p: 8
       }}
     >
       <Grid
@@ -63,86 +61,68 @@ export default function Footer() {
           maxWidth: "lg",
           bgcolor: "inherit",
           color: "#fff",
-          p: 4,
-          justifyContent: "space-around",
+          justifyContent: "space-between",
         }}
         ref={animRef}
       >
-        <Fade in={animate} timeout={800}>
+        <Fade
+          in={animate}
+          timeout={800}
+          sx={{ display: { xs: "none", md: "block" } }}
+        >
           <Grid item>
             <Card>
               <CardMedia>
                 <Image
                   alt="Logo with Caption"
                   src={logocaption}
-                  width={200}
-                  height={150}
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "cover",
-                  }}
+                  width={250}
+                  height={200}
                   priority
                 />
               </CardMedia>
             </Card>
           </Grid>
         </Fade>
-        <Fade in={animate} timeout={1600}>
+        <Fade in={animate} timeout={1600} sx={{ pb: { xs: 4, md: 0 } }}>
           <Grid item>
-            <Typography variant="body1" sx={{ color: "text.secondary" }} gutterBottom>
+            <Typography gutterBottom sx={{ color: "text.secondary", mb: 3 }}>
               QUICK NAVIGATION
             </Typography>
-            <Grid container>
-              <List>
-                <nav aria-label="navbar">
-                  {sections.slice(0, 4).map((section) => (
+            <Stack direction="row" spacing={{ xs: 0, md: 4 }}>
+              <Grid container sx={{ flexDirection: "column" }}>
+                {sections.slice(0, 4).map((section) => (
+                  <Grid item key={section.title} sx={{ pr: 2, pb: 2 }}>
                     <MUILink
+                      variant="body1"
                       color="inherit"
-                      key={section.title}
                       href={section.url}
                       underline="hover"
+                      sx={{ flexShrink: 0 }}
                       component={NextLink}
                     >
-                      <ListItem disablePadding>
-                        <ListItemButton disableGutters>
-                          <ListItemText
-                            primary={section.title}
-                            primaryTypographyProps={{
-                              variant: "subtitle1",
-                            }}
-                          />
-                        </ListItemButton>
-                      </ListItem>
+                      {section.title}
                     </MUILink>
-                  ))}
-                </nav>
-              </List>
-              <List>
-                <nav aria-label="navbar">
-                  {sections.slice(4).map((section) => (
+                  </Grid>
+                ))}
+              </Grid>
+              <Grid container sx={{ flexDirection: "column" }}>
+                {sections.slice(4).map((section) => (
+                  <Grid item key={section.title} sx={{ pb: 2 }}>
                     <MUILink
+                      variant="body1"
                       color="inherit"
-                      key={section.title}
                       href={section.url}
                       underline="hover"
+                      sx={{ flexShrink: 0 }}
                       component={NextLink}
                     >
-                      <ListItem disablePadding>
-                        <ListItemButton>
-                          <ListItemText 
-                            primary={section.title}
-                            primaryTypographyProps={{
-                              variant: "subtitle1",
-                            }}
-                          />
-                        </ListItemButton>
-                      </ListItem>
+                      {section.title}
                     </MUILink>
-                  ))}
-                </nav>
-              </List>
-            </Grid>
+                  </Grid>
+                ))}
+              </Grid>
+            </Stack>
           </Grid>
         </Fade>
         <Fade in={animate} timeout={2400}>
@@ -150,16 +130,16 @@ export default function Footer() {
             <Typography gutterBottom sx={{ color: "text.secondary", mb: 3 }}>
               CONTACT US
             </Typography>
-            <Typography gutterBottom>
+            <Typography gutterBottom sx={{ mb: 2 }}>
               500 Terry Francine Street,
             </Typography>
-            <Typography gutterBottom>
+            <Typography gutterBottom sx={{ mb: 2 }}>
               San Francisco, CA 94158
             </Typography>
-            <Typography gutterBottom>
+            <Typography gutterBottom sx={{ mb: 2 }}>
               Tel: 123-456-7890
             </Typography>
-            <Typography gutterBottom>
+            <Typography gutterBottom sx={{ mb: 2 }}>
               Email: info@mysite.com
             </Typography>
             <Copyright />
