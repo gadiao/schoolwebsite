@@ -25,12 +25,12 @@ import logocaption from "@/img/logocaption.jpg";
 
 const sections = [
   { title: "HOME", url: "/" },
-  { title: "OUR SCHOOL", url: "/ourschool" },
-  { title: "ACADEMICS", url: "/academics" },
-  { title: "ADMISSIONS", url: "/admissions" },
-  { title: "EVENTS", url: "/events" },
-  { title: "NEWS", url: "/news" },
-  { title: "CONTACT", url: "/contact" },
+  { title: "Our School", url: "/ourschool" },
+  { title: "Academics", url: "/academics" },
+  { title: "Admissions", url: "/admissions" },
+  { title: "Events", url: "/events" },
+  { title: "News", url: "/news" },
+  { title: "Contact", url: "/contact" },
 ];
 
 function TopBar() {
@@ -41,42 +41,43 @@ function TopBar() {
   // React Component as an arrow function in a function
   const NavList = () => {
     return (
-    <Box
-      role="presentation"
-      onClick={() => { handleClose() }}
-      sx={{ px: 1, flexShrink: 0 }}
-    >
-      <List>
-        <ListItem>
-          <ListItemButton>
-            <ListItemIcon>
-              <AccountCircle />
-            </ListItemIcon>
-            <ListItemText primary="LOGIN" />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider variant='middle'/>
-      <List>
-        {sections.map((section) => (
-          <MUILink
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            underline="hover"
-            component={NextLink}
-          >
-            <ListItem>
-              <ListItemButton>
-                <ListItemText primary={section.title} />
-              </ListItemButton>
-            </ListItem>
-          </MUILink>
-        ))}
-      </List>
-    </Box>
+      <Box
+        role="presentation"
+        onClick={() => {
+          handleClose();
+        }}
+        sx={{ px: 1, flexShrink: 0 }}
+      >
+        <List>
+          <ListItem>
+            <ListItemButton>
+              <ListItemIcon>
+                <AccountCircle />
+              </ListItemIcon>
+              <ListItemText primary="LOGIN" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        <Divider variant="middle" />
+        <List>
+          {sections.map((section) => (
+            <MUILink
+              color="inherit"
+              noWrap
+              key={section.title}
+              href={section.url}
+              underline="hover"
+              component={NextLink}
+            >
+              <ListItem>
+                <ListItemButton>
+                  <ListItemText primary={section.title} />
+                </ListItemButton>
+              </ListItem>
+            </MUILink>
+          ))}
+        </List>
+      </Box>
     );
   };
   return (
@@ -110,10 +111,18 @@ function TopBar() {
         </MUILink>
       </Paper>
       {/* Login Button here****************************** */}
-      <Button startIcon={<AccountCircle />} sx={{ display: { xs: "none", md: "flex" }, color: 'grey.600' }}>
+      <Button
+        startIcon={<AccountCircle />}
+        sx={{ display: { xs: "none", md: "flex" }, color: "grey.600" }}
+      >
         LOGIN
       </Button>
-      <IconButton onClick={() => { handleOpen() }} sx={{ display: { xs: "flex", md: "none" }, ml: 20 }}>
+      <IconButton
+        onClick={() => {
+          handleOpen();
+        }}
+        sx={{ display: { xs: "flex", md: "none" }, ml: 20 }}
+      >
         <MenuIcon sx={{ fontSize: 35 }} />
       </IconButton>
       <Drawer
@@ -158,15 +167,14 @@ export default function Header() {
             />
           </MUILink>
         </Paper>
-        {sections.slice(1,).map((section) => (
+        {sections.slice(1).map((section) => (
           <MUILink
-            color="inherit"
-            noWrap
             key={section.title}
-            variant="body2"
+            variant="body1"
+            color="inherit"
             href={section.url}
             underline="hover"
-            sx={{ px: 2, flexShrink: 0 }}
+            sx={{ px: 3, flexShrink: 0 }}
             component={NextLink}
           >
             {section.title}
