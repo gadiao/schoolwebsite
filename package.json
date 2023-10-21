@@ -19,6 +19,7 @@
     "eslint-config-next": "latest",
     "next": "13.4.9",
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "tss-react": "^4.8.6"
   }
 }

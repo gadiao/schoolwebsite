@@ -16,7 +16,7 @@ import {
 import heroHome from "@/img/landingpage.png";
 import Hero from "@/components/Hero";
 import News from "@/components/News";
-import EventsBar from "@/components/EventsBar";
+import EventsAccordion from "@/components/Events/EventsAccordion";
 import MoreInfo from "@/components/MoreInfo";
 import founder from "@/img/founder.jpg";
 
@@ -57,113 +57,117 @@ const news = [
 ];
 
 const events = [
-  { title: "Board Meeting", date: "August 24, 7:00 PM - 9:00 PM", url: "#" },
-  { title: "Labour Day", date: "September 4, All Day", url: "#" },
+  {
+    title: "Board Meeting",
+    date: "August 24, 7:00 PM - 9:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
+  {
+    title: "Labour Day",
+    date: "September 4, All Day",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
+    url: "#",
+  },
   {
     title: "First Day of School for Students",
     date: "September 5, All Day",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
     url: "#",
   },
   {
     title: "Governance and Policy Committee Meeting",
     date: "September 5, 7:00 PM - 9:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
     url: "#",
-  }, 
+  },
   {
     title: "Board Meeting",
     date: "September 7, 7:00 PM - 9:00 PM",
-    url: "#",
-  },
-  { title: "Labour Day", date: "September 9, 10:00AM  - 10:00 PM", url: "#" },
-  {
-    title: "First Day of School for Students",
-    date: "September 12, 10:00AM  - 10:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
     url: "#",
   },
   {
     title: "Student Achievement Committee Meeting",
     date: "October 12, 10:00AM  - 10:00 PM",
+    addr: "Stapledon Gardens, Albatross Road",
+    desc: "I’m an event description. Click here to open up the Event Editor and change my text.",
     url: "#",
   },
-]
+];
 
 // Transitions would be nice but without making this a client js
-
 export default function HomePage() {
-
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero imgSrc={heroHome.src} givenAlt={"Landing Image"} />
       <Container
         maxWidth="lg"
-        sx={{ flexDirection: "row", bgcolor: "#F3F3F3", pb: 8 }}
+        sx={{ flexDirection: "column", bgcolor: "#F3F3F3", pb: 8 }}
       >
-        <Grid container sx={{ justifyContent: "center", mb: 8 }}>
-          <Grid item sm={9} md={6} sx={{ mb: { xs: 8, md: 0 } }}>
-            <Card sx={{ p: 6, height: { lg: 750 } }}>
-              <CardMedia sx={{ px: 2 }}>
-                <Paper sx={{ position: "relative", py: 20, mb: 1 }}>
-                  <Image
-                    alt="Founder"
-                    src={founder.src}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </Paper>
-              </CardMedia>
-              <CardContent>
-                <Typography
-                  variant="h5"
-                  gutterBottom
-                  sx={{
-                    fontWeight: "medium",
-                    mb: 4,
-                  }}
-                >
-                  {welcomeinfo.title}
-                </Typography>
-                <Typography variant="body1" paragraph>
-                  {welcomeinfo.description}
-                </Typography>
-                <MUILink
-                  variant="subtitle1"
-                  href="/ourschool"
-                  component={NextLink}
-                >
-                  {welcomeinfo.linkText}
-                </MUILink>
-              </CardContent>
-            </Card>
+        <Grid container sx={{ justifyContent: "center", height: 1 }}>
+          <Grid item md={6}>
+            <Paper sx={{ p: { xs: 6, lg: 8 }, height: "100%" }}>
+              <Paper sx={{ position: "relative", py: 20, mb: 8 }}>
+                <Image
+                  alt="Founder"
+                  src={founder.src}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </Paper>
+              <Typography
+                variant="h4"
+                gutterBottom
+                sx={{
+                  fontWeight: "medium",
+                  mb: 4,
+                  color: "primary.main",
+                }}
+              >
+                {welcomeinfo.title}
+              </Typography>
+              <Typography variant="body1" sx={{ mb: 4 }}>
+                {welcomeinfo.description}
+              </Typography>
+              <MUILink
+                variant="subtitle1"
+                href="/ourschool"
+                component={NextLink}
+              >
+                {welcomeinfo.linkText}
+              </MUILink>
+            </Paper>
           </Grid>
           <Grid item md={6}>
-            <Card sx={{ bgcolor: "primary.main", height: { lg: 750 } }}>
-              <CardContent>
-                <Box sx={{ px: 2, pt: 2 }}>
-                  <Typography
-                    variant="h4"
-                    gutterBottom
-                    sx={{ fontWeight: "medium", color: "white" }}
-                  >
-                    Upcoming Events
-                  </Typography>
-                  <Divider sx={{ mb: 5, bgcolor: "text.secondary" }} />
-                </Box>
-                <EventsBar events={events} />
-              </CardContent>
-            </Card>
+            <Paper sx={{ bgcolor: "primary.main", p: { xs: 6, lg: 8 }, height: "100%"  }}>
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: "medium", color: "white", mb: 4 }}
+              >
+                Upcoming Events
+              </Typography>
+              {/* Can be converted to horizontal with calendar and 4 upcoming events */}
+              <EventsAccordion events={events} />
+            </Paper>
           </Grid>
         </Grid>
         <Grid container sx={{ justifyContent: "center" }}>
-          <Grid item md={8} sx={{ pr: { xs: 0, md: 8 } }}>
+          <Grid item>
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontWeight: "medium" }}
+              sx={{ fontWeight: "medium", color: "primary.main" }}
             >
-              Our Latest News
+              NEWS
             </Typography>
-            <Divider sx={{ mb: 5 }} />
-            <Grid container spacing={2} sx={{ flexDirection: "column" }}>
+            <Divider sx={{ mb: 4 }} />
+            <Grid container spacing={2} sx={{ flexDirection: "row" }}>
               {news.map((post) => (
                 <News
                   key={post.title}
@@ -173,7 +177,7 @@ export default function HomePage() {
               ))}
             </Grid>
           </Grid>
-          <Grid item md={4}>
+          <Grid item>
             <MoreInfo />
           </Grid>
         </Grid>

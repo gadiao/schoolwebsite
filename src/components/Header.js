@@ -174,7 +174,7 @@ export default function Header() {
             color="inherit"
             href={section.url}
             underline="hover"
-            sx={{ px: 3, flexShrink: 0 }}
+            sx={{ px: 3, fontWeight: "medium", flexShrink: 0 }}
             component={NextLink}
           >
             {section.title}

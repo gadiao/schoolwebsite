@@ -114,7 +114,7 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={0}>
         <Grid
           container
-          spacing={4}
+          spacing={2}
           sx={{
             justifyContent: "center",
             pb: 4,
@@ -124,7 +124,6 @@ export default function BasicTabs() {
             <News
               key={post.title}
               // Adjust to have appropriate width for given image
-              bp={{ xs: 200, sm: 425, lg: 500 }}
               post={post}
             />
           ))}
@@ -133,7 +132,7 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={1}>
         <Grid
           container
-          spacing={4}
+          spacing={2}
           sx={{
             justifyContent: "center",
             pb: 4,

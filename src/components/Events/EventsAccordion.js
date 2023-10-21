@@ -26,13 +26,13 @@ function EventsAccordion(props) {
             // id="panel1a-header"
           >
             <Grid container spacing={2}>
-              <Grid item xs={6} md={8} lg={6}>
-                <Typography variant="h5" color="primary" sx={{ textOverflow: "ellipsis" }}>
+              <Grid item xs={8}>
+                <Typography variant="h5" color="primary">
                   {event.title}
                 </Typography>
               </Grid>
-              <Grid item xs={6} md={4} lg={6}>
-                <Typography variant="subtitle1">{event.date}</Typography>
+              <Grid item xs={4}>
+                <Typography>{event.date}</Typography>
               </Grid>
             </Grid>
           </AccordionSummary>

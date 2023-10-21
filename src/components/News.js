@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import PropTypes from "prop-types";
@@ -25,7 +25,7 @@ function News(props) {
           {/* Edit to match school website news posts */}
           <Card
             sx={{
-              height: { xs: 300, lg: 350 },
+              height: { xs: 200 },
               display: "flex",
               flexDirection: "row",
             }}
@@ -34,24 +34,22 @@ function News(props) {
               <Paper
                 sx={{
                   position: "relative",
-                  height: { xs: 300, lg: 350 },
-                  width: { xs: bp.xs, sm: bp.sm, lg: bp.lg },
+                  height: { xs: 200 },
+                  width: { xs: 300, sm: 400, lg: 600 },
                 }}
               >
                 <Image
                   alt={"Random image"}
                   src={post.image}
                   fill
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "cover",
-                  }}
+                  objectFit="cover"
                 />
               </Paper>
             </CardMedia>
-            <CardContent sx={{ mx: 4, mt: 1 }}>
-              <Typography variant="h4" sx={{ fontWeight: 'medium' }}>{post.title}</Typography>
+            <CardContent sx={{ mx: 2 }}>
+              <Typography variant="h5" sx={{ fontWeight: "medium" }}>
+                {post.title}
+              </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                 {post.date}
               </Typography>
@@ -63,7 +61,6 @@ function News(props) {
         </CardActionArea>
       </Grid>
     </Fade>
-    
   );
 }
 
@@ -74,13 +71,6 @@ News.propTypes = {
     image: PropTypes.string.isRequired,
     imageLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-  }).isRequired,
-  bp: PropTypes.shape({
-    xs: PropTypes.number.isRequired,
-    sm: PropTypes.number.isRequired,
-    md: PropTypes.number,
-    lg: PropTypes.number.isRequired,
-    xl: PropTypes.number,
   }).isRequired,
 };
 
