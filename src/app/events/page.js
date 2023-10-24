@@ -60,7 +60,7 @@ const events = [
   },
 ]
 
-export default function Events() {
+const Events = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero
@@ -86,4 +86,6 @@ export default function Events() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Events;

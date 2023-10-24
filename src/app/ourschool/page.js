@@ -63,7 +63,7 @@ const staff = [
   },
 ]
 
-export default function HomePage() {
+const School = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
       <Hero imgSrc={ "https://source.unsplash.com/E813FON0wDQ/2400x1600" } givenAlt={ "Empty Classroom" }/>
@@ -109,4 +109,6 @@ export default function HomePage() {
       </Container>
     </Box>
   );
-}
+};
+
+export default School;

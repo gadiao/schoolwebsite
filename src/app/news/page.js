@@ -3,7 +3,7 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 import Hero from "@/components/Hero";
 import NewsTab from "@/components/News/NewsTab";
 
-export default function HomePage() {
+const NewsPage = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero
@@ -27,4 +27,6 @@ export default function HomePage() {
       </Container>
     </Box>
   );
-}
+};
+
+export default NewsPage;

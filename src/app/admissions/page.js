@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Hero from "@/components/Hero";
 
-export default function Admissions() {
+const Admissions = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero
@@ -102,4 +102,6 @@ export default function Admissions() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Admissions;

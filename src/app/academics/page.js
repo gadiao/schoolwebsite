@@ -3,7 +3,7 @@ import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import Hero from "@/components/Hero";
 import Subjects from "@/components/Academics/Subjects";
 
-export default function Academics() {
+const Academics = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero
@@ -40,4 +40,6 @@ export default function Academics() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Academics

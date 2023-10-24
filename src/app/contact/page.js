@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import Hero from '@/components/Hero';
 
-export default function Contact() {
+const Contact = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: '#F3F3F3' }}>
       {/* Change to an active map where the school is */}
@@ -20,3 +20,5 @@ export default function Contact() {
     </Box>
   );
 }
+
+export default Contact;

@@ -98,11 +98,17 @@ const events = [
   },
 ];
 
+const LandingHero = () => {
+  return (
+    <Hero imgSrc={heroHome.src} givenAlt={"Landing Image"} />
+  )
+};
+
 // Transitions would be nice but without making this a client js
-export default function HomePage() {
+const Home = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
-      <Hero imgSrc={heroHome.src} givenAlt={"Landing Image"} />
+      <LandingHero />
       <Container
         maxWidth="lg"
         sx={{ flexDirection: "column", bgcolor: "#F3F3F3", pb: 8 }}
@@ -193,4 +199,6 @@ export default function HomePage() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Home
