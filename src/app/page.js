@@ -4,9 +4,6 @@ import NextLink from "next/link";
 import { Link as MUILink } from "@mui/material";
 import {
   Box,
-  Card,
-  CardContent,
-  CardMedia,
   Container,
   Divider,
   Grid,
@@ -15,7 +12,7 @@ import {
 } from "@mui/material";
 import heroHome from "@/img/landingpage.png";
 import Hero from "@/components/Hero";
-import News from "@/components/News";
+import GridNews from "@/components/GridNews/";
 import EventsAccordion from "@/components/Events/EventsAccordion";
 import MoreInfo from "@/components/MoreInfo";
 import founder from "@/img/founder.jpg";
@@ -31,27 +28,27 @@ const welcomeinfo = {
 
 const news = [
   {
-    title: "Featured post",
-    date: "Nov 12",
+    title: "Learning at Home Effectively",
+    date: "Sept 12",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random?wallpapers",
+      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
+    image: "https://source.unsplash.com/sEgodrJdMGw",
     imageLabel: "Image Text",
   },
   {
-    title: "Post title",
-    date: "Nov 11",
+    title: "Registration for Science Fair Is Now Open",
+    date: "Oct 15",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random?wallpapers",
+      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
+    image: "https://source.unsplash.com/505eectW54k",
     imageLabel: "Image Text",
   },
   {
-    title: "Post title",
-    date: "Nov 11",
+    title: "Back to School - All You Need to Know",
+    date: "Nov 07",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random?wallpapers",
+      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
+    image: "https://source.unsplash.com/OyCl7Y4y0Bk",
     imageLabel: "Image Text",
   },
 ];
@@ -110,9 +107,17 @@ export default function HomePage() {
         maxWidth="lg"
         sx={{ flexDirection: "column", bgcolor: "#F3F3F3", pb: 8 }}
       >
-        <Grid container sx={{ justifyContent: "center", height: 1 }}>
+        <Grid container>
           <Grid item md={6}>
-            <Paper sx={{ p: { xs: 6, lg: 8 }, height: "100%" }}>
+            <Paper
+              sx={{
+                justifyContent: "center",
+                height: "100%",
+                py: 10,
+                px: { xs: 6, lg: 10 },
+                alignItems: "center",
+              }}
+            >
               <Paper sx={{ position: "relative", py: 20, mb: 8 }}>
                 <Image
                   alt="Founder"
@@ -145,7 +150,16 @@ export default function HomePage() {
             </Paper>
           </Grid>
           <Grid item md={6}>
-            <Paper sx={{ bgcolor: "primary.main", p: { xs: 6, lg: 8 }, height: "100%"  }}>
+            <Paper
+              sx={{
+                justifyContent: "center",
+                height: "100%",
+                py: 10,
+                px: { xs: 6, lg: 10 },
+                alignItems: "center",
+                bgcolor: "primary.main",
+              }}
+            >
               <Typography
                 variant="h4"
                 sx={{ fontWeight: "medium", color: "white", mb: 4 }}
@@ -157,8 +171,11 @@ export default function HomePage() {
             </Paper>
           </Grid>
         </Grid>
-        <Grid container sx={{ justifyContent: "center" }}>
-          <Grid item>
+        <Grid
+          container
+          sx={{ justifyContent: "center", py: 10 }}
+        >
+          <Grid item sx={{ mb: 8 }}>
             <Typography
               variant="h4"
               gutterBottom
@@ -167,15 +184,7 @@ export default function HomePage() {
               NEWS
             </Typography>
             <Divider sx={{ mb: 4 }} />
-            <Grid container spacing={2} sx={{ flexDirection: "row" }}>
-              {news.map((post) => (
-                <News
-                  key={post.title}
-                  bp={{ xs: 200, sm: 250, lg: 250 }}
-                  post={post}
-                />
-              ))}
-            </Grid>
+            <GridNews />
           </Grid>
           <Grid item>
             <MoreInfo />

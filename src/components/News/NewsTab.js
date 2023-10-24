@@ -10,7 +10,9 @@ import {
   Tabs,
   Typography,
 } from "@mui/material";
-import News from "@/components/News"
+import News from "@/components/News/News"
+
+// Combine News.js and NewsTab.js
 
 const news = [
   {
@@ -142,7 +144,6 @@ export default function BasicTabs() {
             <News
               key={post.title}
               // Adjust to have appropriate width for given image
-              bp={{ xs: 200, sm: 425, lg: 500 }}
               post={post}
             />
           ))}
