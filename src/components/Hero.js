@@ -1,9 +1,9 @@
-"use client";
-
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Fade, Paper } from '@mui/material';
 import Image from 'next/image';
+
+// If experiencing hydration issues, convert file to client with "use client"
 
 function Hero(props) {
   const { imgSrc, givenAlt } = props;
@@ -15,7 +15,6 @@ function Hero(props) {
           alt={ givenAlt }
           src={ imgSrc }
           fill
-          quality={85}
           style={{ objectFit: 'cover', objectPosition: '50% 50%' }}
           priority
         />

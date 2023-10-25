@@ -7,7 +7,7 @@ const NewsPage = () => {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <Hero
-        imgSrc={"https://source.unsplash.com/U4zpPfvogJ4/2688x2096"}
+        imgSrc={"https://source.unsplash.com/lUaaKCUANVI/2400x1595"}
         givenAlt={"Rock Climbing"}
       />
       <Container

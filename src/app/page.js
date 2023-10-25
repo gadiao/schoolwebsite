@@ -10,8 +10,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import heroHome from "@/img/landingpage.png";
-import Hero from "@/components/Hero";
+import LandingHero from "@/components/LandingHero";
 import GridNews from "@/components/GridNews/";
 import EventsAccordion from "@/components/Events/EventsAccordion";
 import MoreInfo from "@/components/MoreInfo";
@@ -25,33 +24,6 @@ const welcomeinfo = {
   imageText: "main image description",
   linkText: "Learn More",
 };
-
-const news = [
-  {
-    title: "Learning at Home Effectively",
-    date: "Sept 12",
-    description:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    image: "https://source.unsplash.com/sEgodrJdMGw",
-    imageLabel: "Image Text",
-  },
-  {
-    title: "Registration for Science Fair Is Now Open",
-    date: "Oct 15",
-    description:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    image: "https://source.unsplash.com/505eectW54k",
-    imageLabel: "Image Text",
-  },
-  {
-    title: "Back to School - All You Need to Know",
-    date: "Nov 07",
-    description:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    image: "https://source.unsplash.com/OyCl7Y4y0Bk",
-    imageLabel: "Image Text",
-  },
-];
 
 const events = [
   {
@@ -98,11 +70,7 @@ const events = [
   },
 ];
 
-const LandingHero = () => {
-  return (
-    <Hero imgSrc={heroHome.src} givenAlt={"Landing Image"} />
-  )
-};
+
 
 // Transitions would be nice but without making this a client js
 const Home = () => {
