@@ -23,33 +23,34 @@ const Contact = () => {
           ></iframe>
         </Paper>
       </Fade>
-      <Container maxWidth="lg" sx={{ flexDirection: "row", pb: 4 }}>
+      <Container maxWidth="lg" sx={{ flexDirection: "row", pb: 8 }}>
         <Paper>
           <Typography
             align="center"
             variant="h2"
-            sx={{ pt: 8, color: "primary.main", fontWeight: "medium" }}
+            sx={{ py: 8, color: "primary.main", fontWeight: "medium" }}
           >
             CONTACT US
           </Typography>
-          <Grid container spacing={4}>
-            <Grid item xs={6}>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: "center",
+              px: 2,
+              pb: 2
+            }}
+          >
+            <Grid item md={6}>
               <Container
                 component="form"
                 sx={{
-                  "& .MuiTextField-root": { width: "100%" },
+                  "& .MuiTextField-root": { mb: 2, width: "100%" },
                 }}
                 noValidate
               >
-                <Typography>
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  Let your users get to know you.
-                </Typography>
-                <TextField
-                  id="outlined-name-input"
-                  label="Name"
-                  type="name"
-                />
+                <TextField id="outlined-name-input" label="Name" type="name" />
                 <TextField
                   id="outlined-email-input"
                   label="Email"
@@ -60,23 +61,29 @@ const Contact = () => {
                   label="Subject"
                   type="subject"
                 />
+                <TextField
+                  id="outlined-message-input"
+                  label="Message"
+                  type="message"
+                  multiline
+                  rows={4}
+                />
               </Container>
             </Grid>
-            <Grid item xs={6}>
-              <Container 
+            <Grid item md={6}>
+              <Container
                 sx={{
-                  "& .MuiTypography-root": { mb: 2 },
+                  "& .MuiTypography-root": { mb: 4 },
                 }}
               >
                 <Typography>
-                  For all inquiries, please call our main reception between 8.30am-3.30pm: 123-456-7890
+                  For all inquiries, please call our main reception between
+                  8.30am-3.30pm: 123-456-7890
                 </Typography>
                 <Typography>
                   Address: Stapledon Gardens, Albatross Road
                 </Typography>
-                <Typography>
-                  Email: info@mysite.com
-                </Typography>
+                <Typography>Email: info@mysite.com</Typography>
               </Container>
             </Grid>
           </Grid>
