@@ -6,6 +6,7 @@ import {
   Box,
   Container,
   Divider,
+  Fade,
   Grid,
   Paper,
   Typography,
@@ -75,7 +76,8 @@ const events = [
 // Transitions would be nice but without making this a client js
 const Home = () => {
   return (
-    <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
+    <Fade in={true} timeout={800}>
+      <Box sx={{ flexGrow: 1, bgcolor: "#F3F3F3" }}>
       <LandingHero />
       <Container
         maxWidth="lg"
@@ -166,6 +168,8 @@ const Home = () => {
         </Grid>
       </Container>
     </Box>
+
+  </Fade>
   );
 };
 
