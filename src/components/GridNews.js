@@ -16,6 +16,7 @@ import {
 
 const news = [
   {
+    id: 121421,
     title: "Learning at Home Effectively",
     date: "Sept 12",
     description:
@@ -24,6 +25,7 @@ const news = [
     imageLabel: "Image Text",
   },
   {
+    id: 121462,
     title: "Registration for Science Fair Is Now Open",
     date: "Oct 15",
     description:
@@ -32,6 +34,7 @@ const news = [
     imageLabel: "Image Text",
   },
   {
+    id: 123421,
     title: "Back to School - All You Need to Know",
     date: "Nov 07",
     description:
@@ -47,7 +50,7 @@ function News(props) {
   return (
     // Can check for on scroll
     <Grid item lg={4}>
-      <CardActionArea component="a" href="#">
+      <CardActionArea component="a" href={"/news/" + post.id}>
         {/* Edit to match school website news posts */}
         <Card sx={{ display: { xs: "block", md: "flex", lg: "block" }, height: { lg: "100%" } }}>
           <CardMedia
@@ -83,6 +86,7 @@ function News(props) {
 
 News.propTypes = {
   post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,

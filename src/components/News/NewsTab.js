@@ -2,13 +2,11 @@
 
 import * as React from "react";
 import PropTypes from "prop-types";
-import Image from "next/image";
 import {
   Box,
   Grid,
   Tab,
   Tabs,
-  Typography,
 } from "@mui/material";
 import News from "@/components/News/News"
 
@@ -16,6 +14,7 @@ import News from "@/components/News/News"
 
 const news = [
   {
+    id: 121421,
     title: "Learning at Home Effectively",
     date: "Sept 12",
     description:
@@ -23,7 +22,8 @@ const news = [
     image: "https://source.unsplash.com/sEgodrJdMGw",
     imageLabel: "Image Text",
   },
-  {
+  { 
+    id: 121462,
     title: "Registration for Science Fair Is Now Open",
     date: "Oct 15",
     description:
@@ -32,6 +32,7 @@ const news = [
     imageLabel: "Image Text",
   },
   {
+    id: 123421,
     title: "Back to School - All You Need to Know",
     date: "Nov 07",
     description:
@@ -40,14 +41,16 @@ const news = [
     imageLabel: "Image Text",
   },
   {
+    id: 235421,
     title: "Student Council Election Updates",
     date: "Sept 12",
     description:
       "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    image: "https://source.unsplash.com/sEgodrJdMGw",
+    image: "https://source.unsplash.com/zFSo6bnZJTw/2400x1493",
     imageLabel: "Image Text",
   },
   {
+    id: 872934,
     title: "Registration for Science Fair Is Now Open",
     date: "Oct 15",
     description:
@@ -56,8 +59,9 @@ const news = [
     imageLabel: "Image Text",
   },
   {
-    title: "Back to School - All You Need to Know",
-    date: "Nov 07",
+    id: 840290,
+    title: "Cyber Awareness Month 2023",
+    date: "Nov 03",
     description:
       "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
     image: "https://source.unsplash.com/OyCl7Y4y0Bk",

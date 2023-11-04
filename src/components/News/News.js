@@ -21,7 +21,7 @@ function News(props) {
     // Can check for on scroll
     <Fade in={true} timeout={400}>
       <Grid item>
-        <CardActionArea component="a" href="#">
+        <CardActionArea component="a" href={"/news/" + post.id}>
           {/* Edit to match school website news posts */}
           <Card
             sx={{
@@ -66,6 +66,7 @@ function News(props) {
 
 News.propTypes = {
   post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
