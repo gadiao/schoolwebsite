@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Fade, Paper } from '@mui/material';
+import Paper from '@mui/material/Paper';
 import Image from 'next/image';
 
 // If experiencing hydration issues, convert file to client with "use client"
