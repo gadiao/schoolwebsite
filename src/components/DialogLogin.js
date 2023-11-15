@@ -13,9 +13,7 @@ const DialogLogin = (props) => {
   //     password: data.get('password'),
   //   });
   // };
-
-  // Problem: Find a way to pass state from parent component
-
+  
   return (
     <Dialog
       sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}

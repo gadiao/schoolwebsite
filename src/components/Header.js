@@ -47,6 +47,10 @@ const TopBar = () => {
   const [activeIndex, setActiveIndex] = React.useState(-1);
   const handleCloseDialog = () => setActiveIndex(-1);
 
+  const [login, setLogin] = React.useState(false); 
+  const handleLogin = () => setLogin(true);
+  const handleLogout = () => setLogin(false);
+
   // NavList for Drawer
   const NavList = () => {
     return (
@@ -59,12 +63,21 @@ const TopBar = () => {
       >
         <List>
           <ListItem>
-            <Button
-              onClick={() => setActiveIndex(0)}
-              startIcon={<AccountCircle />}
-            >
-              LOGIN
-            </Button>
+            {login ? (
+              <MUILink href="/account" component={NextLink}>
+                <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
+                  <AccountCircle />
+                </IconButton>
+              </MUILink>
+            ) : (
+              <Button
+                onClick={() => setActiveIndex(0)}
+                startIcon={<AccountCircle />}
+                sx={{ display: { xs: "flex", md: "none" } }}
+              >
+                LOGIN
+              </Button>
+            )}
           </ListItem>
         </List>
         <Divider variant="middle" />
@@ -120,13 +133,22 @@ const TopBar = () => {
           />
         </MUILink>
       </Paper>
-      <Button
-        onClick={() => setActiveIndex(0)}
-        startIcon={<AccountCircle />}
-        sx={{ display: { xs: "none", md: "flex" } }}
-      >
-        LOGIN
-      </Button>
+      {/*====================LOGIN====================*/}
+      {login ? (
+        <MUILink href="/account" component={NextLink}>
+          <IconButton sx={{ display: { xs: "none", md: "flex" } }}>
+            <AccountCircle />
+          </IconButton>
+        </MUILink>
+      ) : (
+        <Button
+          onClick={() => setActiveIndex(0)}
+          startIcon={<AccountCircle />}
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
+          LOGIN
+        </Button>
+      )}
       <IconButton
         onClick={() => {
           handleOpen();
@@ -135,17 +157,15 @@ const TopBar = () => {
       >
         <MenuIcon sx={{ fontSize: 35 }} />
       </IconButton>
-      <Drawer
-        anchor="right"
-        open={open}
-        onClose={() => {
-          handleClose();
-        }}
-      >
+      <Drawer anchor="right" open={open} onClose={handleClose}>
         <NavList />
       </Drawer>
-      <DialogLogin title="Sign In" isActive={activeIndex === 0} onClose={handleCloseDialog}>
-        {(activeIndex === 0) ? (
+      <DialogLogin
+        title="Sign In"
+        isActive={activeIndex === 0}
+        onClose={handleCloseDialog}
+      >
+        {activeIndex === 0 ? (
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <TextField
               margin="normal"
@@ -175,20 +195,64 @@ const TopBar = () => {
               type="submit"
               fullWidth
               variant="contained"
-              onClick={() => setActiveIndex(-1)}
+              onClick={e => {
+                e.preventDefault();
+                handleLogin();
+                handleCloseDialog();
+              }}
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Button variant="text" onClick={() => setActiveIndex(2)}>
+                <Button variant="text" onClick={() => setActiveIndex(1)}>
                   Forgot Password
                 </Button>
               </Grid>
-              <Grid item>
-                <Button variant="text" onClick={() => setActiveIndex(1)}>
+              {/* <Grid item>
+                <Button variant="text" onClick={() => setActiveIndex(2)}>
                   Sign Up
+                </Button>
+              </Grid> */}
+            </Grid>
+          </Box>
+        ) : (
+          <Typography>Error</Typography>
+        )}
+      </DialogLogin>
+      <DialogLogin
+        title="Forgot Password"
+        isActive={activeIndex === 1}
+        onClose={handleCloseDialog}
+      >
+        {activeIndex === 1 ? (
+          <Box component="form" noValidate sx={{ mt: 3 }}>
+            <Typography>
+              Lost your password? Please your email address. You will receive a
+              link to create a new password via email.
+            </Typography>
+            <TextField
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              onClick={() => setActiveIndex(0)}
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Forgot Password
+            </Button>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Button variant="text" onClick={() => setActiveIndex(0)}>
+                  Already have an account? Sign in
                 </Button>
               </Grid>
             </Grid>
@@ -196,9 +260,9 @@ const TopBar = () => {
         ) : (
           <Typography>Error</Typography>
         )}
-      </DialogLogin> 
-      <DialogLogin title="Sign Up" isActive={activeIndex === 1} onClose={handleCloseDialog}>
-        {(activeIndex === 1) ? (
+      </DialogLogin>
+      {/* <DialogLogin title="Sign Up" isActive={activeIndex === 2} onClose={handleCloseDialog}>
+        {(activeIndex === 2) ? (
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -270,43 +334,7 @@ const TopBar = () => {
         ) : (
           <Typography>Error</Typography>
         )}
-      </DialogLogin>
-      <DialogLogin title="Forgot Password" isActive={activeIndex === 2} onClose={handleCloseDialog}>
-        {(activeIndex === 2) ? (
-          <Box component="form" noValidate sx={{ mt: 3 }}>
-            <Typography>
-              Lost your password? Please your email address. You will receive a
-              link to create a new password via email.
-            </Typography>
-            <TextField
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              onClick={() => setActiveIndex(0)}
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Forgot Password
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Button variant="text" onClick={() => setActiveIndex(0)}>
-                  Already have an account? Sign in
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
-        ) : (
-          <Typography>Error</Typography>
-        )}
-      </DialogLogin>
+      </DialogLogin> */}
     </Toolbar>
   );
 };

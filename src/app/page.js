@@ -11,10 +11,10 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import LandingHero from "@/components/LandingHero";
-import GridNews from "@/components/GridNews/";
+import LandingHero from "@/components/Landing/LandingHero";
+import GridNews from "@/components/Landing/GridNews/";
 import EventsAccordion from "@/components/Events/EventsAccordion";
-import MoreInfo from "@/components/MoreInfo";
+import MoreInfo from "@/components/Landing/MoreInfo";
 import founder from "@/img/founder.jpg";
 
 const welcomeinfo = {
