@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Container, Fade, Paper, Typography } from "@mui/material";
 import Hero from "@/components/Hero";
-import NewsTab from "@/components/News/NewsTab";
+import NewsTab from "@/components/news/NewsTab";
 
 const NewsPage = () => {
   return (

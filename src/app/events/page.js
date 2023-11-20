@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import Hero from "@/components/Hero";
-import MonthsTab from "@/components/Events/MonthsTab";
+import MonthsTab from "@/components/events/MonthsTab";
 
 
 // Back-end injection here for events
