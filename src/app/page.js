@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import LandingHero from "@/components/landing/LandingHero";
-import GridNews from "@/components/Landing/GridNews/";
+import GridNews from "@/components/landing/GridNews/";
 import EventsAccordion from "@/components/events/EventsAccordion";
 import MoreInfo from "@/components/landing/MoreInfo";
 import founder from "@/img/founder.jpg";
