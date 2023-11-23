@@ -8,7 +8,6 @@ import {
   Box,
   Button,
   Checkbox,
-  Dialog,
   Divider,
   Drawer,
   FormControlLabel,
@@ -27,7 +26,7 @@ import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import logocaption from "@/img/logocaption.jpg";
-import DialogLogin from "@/components/DialogLogin";
+import { DialogLogin } from "./DialogLogin";
 
 const sections = [
   { title: "HOME", url: "/" },

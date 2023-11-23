@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import logocaption from "@/img/logocaption.jpg";
-import useAnimate from "@/components/useAnimate";
+import { useAnimate } from "./useAnimate";
 
 const sections = [
   { title: "Home", url: "/" },
