@@ -11,10 +11,11 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import LandingHero from "@/components/landing/LandingHero";
-import GridNews from "@/components/landing/GridNews/";
+import { GridNews, LandingHero, MoreInfo } from '@/app/_components/landing';
+// import LandingHero from "@/components/landing/LandingHero";
+// import GridNews from "@/components/landing/GridNews/";
+// import MoreInfo from "@/components/landing/MoreInfo";
 import EventsAccordion from "@/components/events/EventsAccordion";
-import MoreInfo from "@/components/landing/MoreInfo";
 import founder from "@/img/founder.jpg";
 
 const welcomeinfo = {
@@ -71,9 +72,8 @@ const events = [
   },
 ];
 
-
-
 // Transitions would be nice but without making this a client js
+
 const Home = () => {
   return (
     <Fade in={true} timeout={800}>
