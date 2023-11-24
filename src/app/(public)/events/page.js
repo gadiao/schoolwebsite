@@ -6,16 +6,15 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import Hero from "@/components/Hero";
+import { Hero } from "@/app/_components";
 import MonthsTab from "@/components/events/MonthsTab";
-
 
 // Back-end injection here for events
 //============================================
 // Requirements:
-// - date converted to Date type
-// - unique keys
-// - remove previous events
+//  - date converted to Date type
+//  - unique keys
+//  - remove previous events
 
 const Events = () => {
   return (

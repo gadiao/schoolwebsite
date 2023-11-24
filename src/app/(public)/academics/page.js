@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Box, Container, Grid, Fade, Paper, Typography } from "@mui/material";
-import Hero from "@/components/Hero";
+import { Box, Container, Fade, Paper, Typography } from "@mui/material";
+import { Hero } from "@/app/_components";
 import Subjects from "@/components/academics/Subjects";
 
 const Academics = () => {

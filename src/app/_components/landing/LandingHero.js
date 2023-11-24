@@ -1,6 +1,6 @@
 "use client"
 
-import Hero from "@/components/Hero"
+import { Hero } from "@/app/_components";
 import heroHome from "@/img/landingpage.png";
 import firstImg from "@/img/collection/IMG-20230818-WA0006.jpg";
 

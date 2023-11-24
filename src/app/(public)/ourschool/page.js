@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Box, Container, Fade, Grid, Paper, Typography } from '@mui/material';
-import Hero from '@/components/Hero';
+import { Hero } from "@/app/_components";
 import Staff from '@/components/ourschool/Staff';
 import founder from '@/img/founder.jpg'
 
@@ -61,7 +61,7 @@ const staff = [
     email: 'info@mysite.com',
     phone: '123-456-7890'
   },
-]
+];
 
 const School = () => {
   return (
