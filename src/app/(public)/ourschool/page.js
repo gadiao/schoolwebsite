@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { Box, Container, Fade, Grid, Paper, Typography } from '@mui/material';
 import { Hero } from "@/app/_components";
-import Staff from '@/components/ourschool/Staff';
+import Staff from '@/app/_components/ourschool/Staff';
 import founder from '@/img/founder.jpg'
 
 const welcomeinfo = {

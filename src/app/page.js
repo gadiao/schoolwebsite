@@ -15,7 +15,7 @@ import { GridNews, LandingHero, MoreInfo } from '@/app/_components/landing';
 // import LandingHero from "@/components/landing/LandingHero";
 // import GridNews from "@/components/landing/GridNews/";
 // import MoreInfo from "@/components/landing/MoreInfo";
-import EventsAccordion from "@/components/events/EventsAccordion";
+import EventsAccordion from "@/app/_components/events/EventsAccordion";
 import founder from "@/img/founder.jpg";
 
 const welcomeinfo = {
