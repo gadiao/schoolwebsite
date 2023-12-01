@@ -11,12 +11,12 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { GridNews, LandingHero, MoreInfo } from '@/app/_components/landing';
+import { GridNews, LandingHero, MoreInfo } from '_components/landing';
 // import LandingHero from "@/components/landing/LandingHero";
 // import GridNews from "@/components/landing/GridNews/";
 // import MoreInfo from "@/components/landing/MoreInfo";
-import EventsAccordion from "@/app/_components/events/EventsAccordion";
-import founder from "@/img/founder.jpg";
+import EventsAccordion from "_components/events/EventsAccordion";
+import founder from "_helpers/img/founder.jpg";
 
 const welcomeinfo = {
   title: "Welcome to Center For Early Education (CFESchool)",

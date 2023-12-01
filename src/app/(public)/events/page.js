@@ -6,8 +6,8 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { Hero } from "@/app/_components";
-import MonthsTab from "@/app/_components/events/MonthsTab";
+import { Hero } from "_components";
+import MonthsTab from "_components/events/MonthsTab";
 
 // Back-end injection here for events
 //============================================

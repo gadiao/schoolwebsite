@@ -8,7 +8,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { Hero } from "@/app/_components";
+import { Hero } from "_components";
 
 const Admissions = () => {
   return (

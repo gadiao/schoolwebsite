@@ -8,7 +8,7 @@ import {
   Tab,
   Tabs,
 } from "@mui/material";
-import News from "@/app/_components/news/News"
+import News from "_components/news/News"
 
 // Combine News.js and NewsTab.js
 

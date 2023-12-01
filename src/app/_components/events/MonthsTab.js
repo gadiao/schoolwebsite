@@ -3,7 +3,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Box, Grid, styled, Tab, Tabs, Typography } from "@mui/material";
-import EventsAccordion from "@/app/_components/events/EventsAccordion";
+import EventsAccordion from "_components/events/EventsAccordion";
 
 const aug = [
   {

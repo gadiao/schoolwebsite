@@ -25,7 +25,7 @@ import {
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import logocaption from "@/img/logocaption.jpg";
+import logocaption from "_helpers/img/logocaption.jpg";
 import { DialogLogin } from "./DialogLogin";
 
 const sections = [
