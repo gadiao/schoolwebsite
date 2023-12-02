@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Box, Container, Fade, Grid, Paper, Typography } from '@mui/material';
-import { Hero } from "@/app/_components";
-import Staff from '@/app/_components/ourschool/Staff';
-import founder from '@/img/founder.jpg'
+import { Hero } from "_components";
+import Staff from '_components/ourschool/Staff';
+import founder from '_helpers/img/founder.jpg'
 
 const welcomeinfo = {
   title: `Principal's Welcome`,
