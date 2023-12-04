@@ -15,7 +15,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import logocaption from "_helpers/img/logocaption.jpg";
+import logocaption from "_helpers/client/img/logocaption.jpg";
 import { useAnimate } from "./useAnimate";
 
 const sections = [

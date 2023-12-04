@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Header, Footer } from '_components';
-import { ThemeRegistry } from '_helpers/themeregistry';
+import { ThemeRegistry } from '_helpers/client/themeregistry';
 
 const RootLayout = ({ children }) => {
   return (

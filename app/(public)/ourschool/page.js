@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Box, Container, Fade, Grid, Paper, Typography } from '@mui/material';
 import { Hero } from "_components";
 import Staff from '_components/ourschool/Staff';
-import founder from '_helpers/img/founder.jpg'
+import founder from '_helpers/client/img/founder.jpg'
 
 const welcomeinfo = {
   title: `Principal's Welcome`,

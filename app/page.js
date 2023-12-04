@@ -16,7 +16,7 @@ import { GridNews, LandingHero, MoreInfo } from '_components/landing';
 // import GridNews from "@/components/landing/GridNews/";
 // import MoreInfo from "@/components/landing/MoreInfo";
 import EventsAccordion from "_components/events/EventsAccordion";
-import founder from "_helpers/img/founder.jpg";
+import founder from "_helpers/client/img/founder.jpg";
 
 const welcomeinfo = {
   title: "Welcome to Center For Early Education (CFESchool)",
